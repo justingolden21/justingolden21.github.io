@@ -4,7 +4,7 @@ $( ()=> {
 
 	// make and rotate tags
 	// tagCols is for random but even distribution of tags per column
-	const TAGS = 'WebDesign UI UX GraphicDesign LogoDesign HTML CSS JS jQuery Bootstrap Sass Jekyll NoSQL Android MobileApps Firebase SEO Writing VideoEditing'.split(' ');
+	const TAGS = 'WebDesign UI UX GraphicDesign LogoDesign Branding Typography HTML CSS JS jQuery Bootstrap Sass Jekyll Svelte AlpineJS TailwindCSS NoSQL Android ResponsiveDesign MobileApps Firebase PWA SEO Writing VideoEditing'.split(' ');
 	let tagCols = [];
 	for(let i=0; i<Math.ceil(TAGS.length/4); i++) {
 		tagCols = tagCols.concat([1,2,3,4]);
