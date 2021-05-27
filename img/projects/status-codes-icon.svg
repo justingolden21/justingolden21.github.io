@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
-	<g stroke="#333" stroke-width="2">
-		<circle fill="#FFF" cx="28" cy="28" r="27"/>
-		<g fill="none">
-			<polygon points="22,42 34,42 34,38 38,38 38,34 42,34 42,14 14,14 14,34 18,34 18,38 22,38"/>
-			<line x1="18" y1="18" x2="18" y2="30"/>
-			<line x1="22" y1="18" x2="22" y2="30"/>
-			<line x1="26" y1="18" x2="26" y2="30"/>
-			<line x1="30" y1="18" x2="30" y2="30"/>
-			<line x1="34" y1="18" x2="34" y2="30"/>
-			<line x1="38" y1="18" x2="38" y2="30"/>
-		</g>
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56"><g stroke="#333" stroke-width="2"><circle cx="28" cy="28" r="27" fill="#FFF"/><g fill="none"><polygon points="22 42 34 42 34 38 38 38 38 34 42 34 42 14 14 14 14 34 18 34 18 38 22 38"/><line x1="18" x2="18" y1="18" y2="30"/><line x1="22" x2="22" y1="18" y2="30"/><line x1="26" x2="26" y1="18" y2="30"/><line x1="30" x2="30" y1="18" y2="30"/><line x1="34" x2="34" y1="18" y2="30"/><line x1="38" x2="38" y1="18" y2="30"/></g></g></svg>
