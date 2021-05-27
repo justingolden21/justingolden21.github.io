@@ -155,10 +155,24 @@ const PROJECTS = [
 		'features': 'You can choose from an array of beautiful colors and enter your brush size. You can save or load images, print, go fullscreen, and customize your UI. There is a fill mode, and options to edit your image such as greyscale, lighten, darken, and invert.',
 		'tech': 'This website was made with just plain JS and some jQuery, and uses Google\'s material icon set. The website uses the HTML canvas to draw and perform image editing.',
 		'story': 'A long time ago, I worked on a very simple drawing website using the HTML canvas. Several years later, I came back to it, cleaned up the code and the UI, fixed bugs, and added more features. I don\'t think anyone uses it, but it is a cool little tool I enjoyed designing.'
+	},
+	{
+		'name': 'Chess',
+		'type': 'website',
+		'icon': 'img/projects/chess-icon.svg',
+		'color': '#1E293B',
+		'screenshot': 'img/projects/chess-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/chess/',
+		'desc': 'is a website for playing chess built with chess.js and chessboard.js, meant for on-the-go mobile play on one device.',
+		'features': 'Chess features draggable pieces, hover to show legal moves, captured pieces, move history, options for rotating the board after moves, options to export the FEN or PGN, import a FEN or PGN, undo or redo moves, a sandbox mode, and of course, a dark theme.',
+		'tech': 'This website was made with chess.js and chessboard.js, and uses TailwindCSS and its colors, as well as icons from both Font Awesome and Hero Icons. (favicon from Font Awesome)',
+		'story': 'I had the idea of making a several games in one offline mobile app, and I wanted to add chess to that arsenal (some time in the future). I had already used chess.js and chessboard.js before in another project, and I wanted to focus on making a beautiful, clean, and intuitive interface for chess, which is currently hard to come by. I opted for a simple, friendly, and stylish color palette, and a mobile-first design that effortlessly grows to utilize the full space on desktop.'
 	}
 
 	// {
 	// 	'name': 'Barcode',
+	// 	'type': 'website',
 	// 	'icon': 'img/projects/barcode-icon.svg',
 	// 	'color': '#333',
 	// 	'screenshot': 'img/projects/barcode-screenshot.jpg',

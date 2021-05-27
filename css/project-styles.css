@@ -22,7 +22,7 @@
 	margin-top: 10px;
 	width: 64px;
 }
-.project-desc, .project-details {
+.project-desc, .project-details, .project-features, .project-tech {
 	padding: 20px;
 	padding-top: 10px;
 	text-align: left;
