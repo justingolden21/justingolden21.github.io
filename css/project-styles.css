@@ -32,6 +32,7 @@
 	/*width: 40%;*/
 	/*width: 200px;*/
 	box-shadow: 5px 5px 0px #333;
+	margin-bottom: 10px;
 }
 .project-div:hover .project-details {
 	display: inline;
@@ -72,7 +73,7 @@
 @media only screen and (max-width: 768px) { /* md */
 	.project-screenshot {
 		/* centered */
-		margin: auto;
+		margin: 10px auto;
 		display: block;
 	}
 	.project-desc, .project-details {

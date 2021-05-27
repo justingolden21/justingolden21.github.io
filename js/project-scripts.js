@@ -168,21 +168,101 @@ const PROJECTS = [
 		'features': 'Chess features draggable pieces, hover to show legal moves, captured pieces, move history, options for rotating the board after moves, options to export the FEN or PGN, import a FEN or PGN, undo or redo moves, a sandbox mode, and of course, a dark theme.',
 		'tech': 'This website was made with chess.js and chessboard.js, and uses TailwindCSS and its colors, as well as icons from both Font Awesome and Hero Icons. (favicon from Font Awesome)',
 		'story': 'I had the idea of making a several games in one offline mobile app, and I wanted to add chess to that arsenal (some time in the future). I had already used chess.js and chessboard.js before in another project, and I wanted to focus on making a beautiful, clean, and intuitive interface for chess, which is currently hard to come by. I opted for a simple, friendly, and stylish color palette, and a mobile-first design that effortlessly grows to utilize the full space on desktop.'
-	}
+	},
+	{
+		'name': 'Hollow Knight Charms',
+		'type': 'website',
+		'icon': 'img/projects/hollow-knight-icon.svg',
+		'color': '#993D62',
+		'screenshot': 'img/projects/hollow-knight-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/hollowknight/',
+		'desc': 'is an easy to use quick reference guide for charms in the game Hollow Knight',
+		'features': 'Click on a charm to view information about it such as notch cost, price, location, backstory, effects, and more. You can hover over the spoiler to reveal how to acquire it, and filter charms by category as well.',
+		'tech': 'This website was made with Bootstrap and jQuery, and icons from Font Awesome. I\'m using the game images from the wiki.',
+		'story': 'Hollow Knight is my absolute favorite game. I was wondering if such a reference for charms exists, and the best I found was on a hidden little page on the wiki, which could also use a UI redesign. I wanted to try my take on it, and I\'m happy with the result.'
+	},
+	{
+		'name': 'Pokedex',
+		'type': 'website',
+		'icon': 'img/projects/pokedex-icon.svg',
+		'color': '#933',
+		'screenshot': 'img/projects/pokedex-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/pokedex',
+		'desc': 'is a clean, simple, and powerful pokedex. ',
+		'features': 'Search any pokemon to find its types, stats, abilities, egg groups, evolution, moves, and more. The searchbar autofocuses on page load and autocompletes, and the current pokemon is linked in the URL paramater for easy sharing and reference',
+		'tech': 'I built this website using Bootstrap, jQuery, Font Awesome, Popper, and Typeahead. It uses the pokeAPI for fetching data.',
+		'story': 'I was inspired by pokedex.org to create my own pokedex with a better user interface. I also like pokemon and working with larger data.'
+	},
+	{
+		'name': 'Keycode',
+		'type': 'website',
+		'icon': 'img/projects/keycode-icon.svg',
+		'color': '#333',
+		'screenshot': 'img/projects/keycode-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/keycode/',
+		'desc': 'is a simple keycode finder. Just press a key to find its number and name (e.which and e.code)',
+		'features': 'View the number and name of any key pressed. Features quick copy buttons and a history as well.',
+		'tech': 'This website uses Font Awesome icons. I previously used jQuery but figured it was simple to convert to umbrellaJS (I\'m using my fork which contains val and css functions from closed pull requests)',
+		'story': 'Sometimes when programming a JS web app (more commonly for games) it\'s useful to tell what the name or code for different keyboard keys are. I found another website that solves this but figured it was easy to implement and I could improve upon som aspects in my own implementation.'
+	},
+	{
+		'name': 'Status Codes',
+		'type': 'website',
+		'icon': 'img/projects/status-codes-icon.svg',
+		'color': '#333',
+		'screenshot': 'img/projects/status-codes-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/status-codes/',
+		'desc': 'is a simple quick reference for HTTP response status codes. Just type a code to find it.',
+		'features': 'Status codes are split into five sections with accordions for easy navitation. Each status code has a name, short description, and link to the docs on Mozilla. On page load, you can immedately type any status code and hit enter to view that code, which is also linked in the URL.',
+		'tech': 'Status Codes is built using Hero Icons. The whole webiste is less than 10kb, and built with vanilla JS.',
+		'story': 'I gathered the information from the Mozilla Docs on status codes and had a vision for a website that\'s faster and easier to navigate.'
+	},
+	{
+		'name': 'Random Chess',
+		'type': 'website',
+		'icon': 'img/projects/random-chess-icon.svg',
+		'color': '#B58863',
+		'screenshot': 'img/projects/random-chess-screenshot.png',
+		'screenshotIsLong': true,
+		'link': 'https://justingolden.me/randomchess/',
+		'desc': 'is a website to watch random games of chess.',
+		'features': 'Choose the move speed and whether to start a new game after the previous one is finished. You can also track the result of each game and view the statistics.',
+		'tech': 'This website is made using chess.js and chessboard.js. This website was the precursor to my chess website and how I learned to use chess.js and chessboard.js. This website also uses Font Awesome and Bootstrap.',
+		'story': 'I had an idea for a purely random game of chess, and wondered what the results would be. This website isn\'t good for much, but it\'s fun to watch and bet on a side (there are a lot of drawn games though).'
+	},
+	{
+		'name': 'Tailwind Colors',
+		'type': 'website',
+		'icon': 'img/projects/tailwind-colors-icon.svg',
+		'color': '#6366F1',
+		'screenshot': 'img/projects/tailwind-colors-screenshot.png',
+		'screenshotIsLong': false,
+		'link': 'https://justingolden.me/tailwind-colors/',
+		'desc': 'is a quick reference to view, copy, and print TailwindCSS colors.',
+		'features': 'Just click a color to copy it to clipboard. You can click the plus button to view the expanded palette, click the print button (or ctrl+P) to print it as a reference poster on 8.5x11 or A4 paper. You can also click the download button to download the PDF of the poster. You can also click the dark mode button to preview the colors on a black background, or right click any color to set the background color to that color.',
+		'tech': 'This website is built with TailwindCSS and Hero Icons. The whole website weighs in under 10kb.',
+		'story': 'TailwindCSS has an awesome color palette, but it can be a pain to use if you are not using TailwindCSS. I made this website to solve that problem. I designed the UI to be very friendly and easy to use, and to scale especially well on mobile.'
+	},
+
+
 
 	// {
 	// 	'name': 'Barcode',
 	// 	'type': 'website',
 	// 	'icon': 'img/projects/barcode-icon.svg',
 	// 	'color': '#333',
-	// 	'screenshot': 'img/projects/barcode-screenshot.jpg',
+	// 	'screenshot': 'img/projects/barcode-screenshot.png',
 	// 	'screenshotIsLong': true,
 	// 	'link': '',
 	// 	'desc': 'is a ',
 	// 	'features': '',
 	// 	'tech': '',
 	// 	'story': ''
-	// }
+	// },
 	
 ];
 
