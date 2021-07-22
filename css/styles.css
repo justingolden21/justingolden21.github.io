@@ -31,16 +31,30 @@ hr {
 	border: 2px solid #fff;
 	border-radius: 50%;
 	transition: 0.1s ease-in-out;
+
+	animation: saturateImg 3s ease-in-out;
+
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+	filter: grayscale(1);
 }
-#profile-img:hover {
-	transform: scale(1.05);
+
+@keyframes saturateImg {
+	from {
+		filter: grayscale(1);
+	}
+	to {
+		filter: grayscale(0);
+	}
 }
+
 h1 {
 	letter-spacing: 2px;
 }
 
 /* links */
 a {
+	font-weight: bold;
 	color: #666;
 	/*position: relative;*/
 	text-decoration: none;
@@ -48,7 +62,9 @@ a {
 a:not(.project-desc-link) {
 	position: relative;
 }
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: #999;
 	text-decoration: none;
 	outline: none;
@@ -90,7 +106,7 @@ a:hover:before {
 	top: 0;
 }
 #menu-btn:focus {
-	box-shadow: 0 0 0 0.2rem rgba(51,51,51,.25);
+	box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
 }
 #sidebar {
 	height: 100%;
@@ -99,7 +115,7 @@ a:hover:before {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	background-color: rgba(255,255,255,.9);
+	background-color: rgba(255, 255, 255, 0.9);
 	overflow-x: hidden;
 	padding-top: 75px;
 	transition: 0.25s ease-in-out;
@@ -112,7 +128,8 @@ a:hover:before {
 	display: block;
 	color: #333;
 }
-#sidebar a:hover, #sidebar a:focus {
+#sidebar a:hover,
+#sidebar a:focus {
 	background-color: #333;
 	color: #fff;
 	outline: none;
@@ -132,7 +149,7 @@ a:hover:before {
 	color: #fff;
 	border-radius: 0;
 }
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
 .bs-tooltip-bottom .arrow::before {
 	border-bottom-color: #333;
 }
@@ -142,8 +159,8 @@ a:hover:before {
 #profile-img path {
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
-	animation: dash 4s ease-in reverse;
-	stroke: rgba(255,255,255,0.8) !important;
+	animation: dash 4s ease-in-out reverse;
+	stroke: rgba(255, 255, 255, 0.8) !important;
 	stroke-width: 1.5 !important;
 }
 
@@ -159,7 +176,8 @@ a:hover:before {
 }
 
 /* media */
-@media screen and (max-width: 768px) { /*md*/
+@media screen and (max-width: 768px) {
+	/*md*/
 	.tag-col br {
 		display: none !important;
 	}

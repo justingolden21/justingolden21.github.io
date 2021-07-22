@@ -1,95 +1,132 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Justin Golden's Portfolio</title>
+	<head>
+		<title>Justin Golden's Portfolio</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-	<meta name="title=" content="Justin Golden's Portfolio">
-	<meta name="robots" content="index, follow">
-	<meta name="description" content="Justin Golden's personal portfolio">
-	<meta name="keywords" content="WebDev, WebDevelopment, WebDeveloper, FrontEnd, FrontEndWebDev, WebDesign">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+		<meta name="title=" content="Justin Golden's Portfolio" />
+		<meta name="robots" content="index, follow" />
+		<meta name="description" content="Justin Golden's personal portfolio" />
+		<meta
+			name="keywords"
+			content="WebDev, WebDevelopment, WebDeveloper, FrontEnd, FrontEndWebDev, WebDesign"
+		/>
 
-	<meta name="theme-color" content="#333">
-	<meta name="msapplication-navbutton-color" content="#333">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#333">
+		<meta name="theme-color" content="#333" />
+		<meta name="msapplication-navbutton-color" content="#333" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#333" />
 
-	<!-- font awesome, bootstrap, jquery, popper -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<!-- font awesome, bootstrap, jquery, popper -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+			integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-	<!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
-	<link rel="stylesheet" type="text/css" href="css/hamburger.css">
+		<!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
+		<link rel="stylesheet" type="text/css" href="css/hamburger.css" />
 
-	<!-- local links -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" type="text/css" href="css/project-styles.css">
-	<link rel="stylesheet" type="text/css" href="css/flipcard.css">
-	<link id="nametag-css" rel="stylesheet" type="text/css" href="">
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="js/project-scripts.js"></script>
+		<!-- local links -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/project-styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/flipcard.css" />
+		<link id="nametag-css" rel="stylesheet" type="text/css" href="" />
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/project-scripts.js"></script>
+	</head>
+	<body>
+		<div id="top-container">
+			<button
+				id="menu-btn"
+				class="hamburger hamburger--squeeze btn"
+				type="button"
+			>
+				<span class="hamburger-box">
+					<span class="hamburger-inner" />
+				</span>
+			</button>
 
-</head>
-<body>
-	<div id="top-container">
+			<nav id="sidebar">
+				<a href="index.html"><i class="fas fa-home"></i> Home</a>
+				<a href="resume.pdf" target="_blank"
+					><i class="fas fa-id-card"></i> R&#233;sum&#233;</a
+				>
+				<a href="#" class="active"
+					><i class="fas fa-drafting-compass"></i> Projects</a
+				>
+				<!-- <a href="#">Clients</a> -->
+			</nav>
 
-		<button id="menu-btn" class="hamburger hamburger--squeeze btn" type="button">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"/>
-			</span>
-		</button>
+			<img id="profile-img" src="img/profile/1.png" draggable="false" />
+			<h1>Justin Golden</h1>
 
-		<nav id="sidebar">
-			<a href="index.html"><i class="fas fa-home"></i> Home</a>
-			<a href="resume.pdf" target="_blank"><i class="fas fa-id-card"></i> R&#233;sum&#233;</a>
-			<a href="#" class="active"><i class="fas fa-drafting-compass"></i> Projects</a>
-			<!-- <a href="#">Clients</a> -->
-		</nav>
+			<h5>Programmer. &nbsp; Writer. &nbsp; Graphic Designer</h5>
 
-		<img id="profile-img" src="img/profile/1.png" draggable="false">
-		<h1>Justin Golden</h1>
+			<button
+				id="mail-btn"
+				class="btn btn-dark mx-2"
+				title="Email me"
+				data-toggle="tooltip"
+				data-placement="bottom"
+			>
+				<i id="envelope-icon" class="fas fa-envelope"></i>
+			</button>
+			<button
+				id="linkedin-btn"
+				class="btn btn-dark mx-2"
+				title="View my LinkedIn"
+				data-toggle="tooltip"
+				data-placement="bottom"
+			>
+				<i class="fab fa-linkedin"></i>
+			</button>
+			<button
+				id="github-btn"
+				class="btn btn-dark mx-2"
+				title="View my GitHub"
+				data-toggle="tooltip"
+				data-placement="bottom"
+			>
+				<i class="fab fa-github"></i>
+			</button>
 
-		<h5>Programmer. &nbsp; Writer. &nbsp; Graphic Designer</h5>
-		
-		<button id="mail-btn" class="btn btn-dark mx-2" title="Email me" data-toggle="tooltip" data-placement="bottom">
-			<i id="envelope-icon" class="fas fa-envelope"></i>
-		</button>
-		<button id="linkedin-btn" class="btn btn-dark mx-2" title="View my LinkedIn" data-toggle="tooltip" data-placement="bottom">
-			<i class="fab fa-linkedin"></i>
-		</button>
-		<button id="github-btn" class="btn btn-dark mx-2" title="View my GitHub" data-toggle="tooltip" data-placement="bottom">
-			<i class="fab fa-github"></i>
-		</button>
+			<hr />
+		</div>
 
-		<hr>
+		<h5 class="mx-5 font-weight-normal">
+			Below you can find some of my projects. For each project, I designed
+			and created the application, all promotional images, icons and
+			assets, descriptions, and videos.
+			<u>Hover or click a project to get started.</u>
+		</h5>
+		<br />
 
-	</div>
-
-	<h5 class="mx-5">Below you can find some of my projects. For each project, I designed and created the application, all promotional images, icons and assets, descriptions, and videos. <span class="text-muted">Hover or click a project to get started.</span></h5>
-	<br>
-
-	<div id="projects-div">
-		<div id="website-div" class="row">
-			<div class="col-12">
-				<h1>Websites</h1>
+		<div id="projects-div">
+			<div id="website-div" class="row">
+				<div class="col-12">
+					<h1>Websites</h1>
+				</div>
+			</div>
+			<div id="web-app-div" class="row">
+				<div class="col-12">
+					<h1>Web Apps</h1>
+				</div>
+			</div>
+			<div id="chrome-extension-div" class="row">
+				<div class="col-12">
+					<h1>Chrome Extensions</h1>
+				</div>
 			</div>
 		</div>
-		<div id="web-app-div" class="row">
-			<div class="col-12">
-				<h1>Web Apps</h1>
-			</div>
-		</div>
-		<div id="chrome-extension-div" class="row">
-			<div class="col-12">
-				<h1>Chrome Extensions</h1>
-			</div>
-		</div>
-
-	</div>
-
-</body>
+	</body>
 </html>
