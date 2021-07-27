@@ -1,5 +1,5 @@
 /*!
- * Hamburgers
+ * Modified from:
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
  * @site https://jonsuh.com/hamburgers
@@ -39,7 +39,7 @@
 
 .hamburger-box {
 	width: 40px;
-	height: 24px;
+	height: 40px;
 	display: inline-block;
 	position: relative;
 }

@@ -74,6 +74,25 @@
 	color: #666;
 }
 
+.view-project {
+	border: 2px solid #666;
+	padding: 0.25rem;
+	display: block;
+	letter-spacing: 0.1rem;
+	font-weight: 400 !important;
+	text-align: center;
+	color: #666;
+	margin-top: 1rem;
+}
+
+#profile-img {
+	cursor: pointer;
+	transition: transform 0.2s linear;
+}
+#profile-img:hover {
+	transform: scale(1.05);
+}
+
 @media only screen and (max-width: 768px) {
 	/* md */
 	.project-screenshot {

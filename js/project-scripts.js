@@ -289,6 +289,8 @@ $(() => {
 		'img/profile/' + Math.ceil(Math.random() * 4) + '.png'
 	);
 
+	$('#profile-img').click(() => window.open('index.html', '_self'));
+
 	for (let i = 0; i < PROJECTS.length; i++) {
 		let tmpHTML =
 			'<div class="project-div col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal-' +
@@ -347,7 +349,7 @@ $(() => {
 				  '<h3 class="text-center">Features</h3>' +
 				  '<p class="project-details">' +
 				  PROJECTS[i].features +
-				  ' <a href="' +
+				  ' <a class="view-project" href="' +
 				  PROJECTS[i].link +
 				  '" target="_blank">View this project </a>' +
 				  '</p>' +
@@ -360,7 +362,7 @@ $(() => {
 				  '<br><br><h3 class="text-center">Features</h3>' +
 				  '<p class="project-details">' +
 				  PROJECTS[i].features +
-				  ' <a href="' +
+				  ' <a class="view-project" href="' +
 				  PROJECTS[i].link +
 				  '" target="_blank">View this project </a>' +
 				  '</p>') +

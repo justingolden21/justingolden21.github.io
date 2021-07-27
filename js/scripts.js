@@ -95,7 +95,7 @@ function toggleNav() {
 }
 
 function openNav() {
-	$('#sidebar').css('width', '250px');
+	$('#sidebar').css('width', '16rem');
 	$('#sidebar a').css('display', 'none');
 	$('#sidebar a').attr('tabindex', '');
 	let mils = parseFloat($('#sidebar').css('transition-duration')) * 1000;

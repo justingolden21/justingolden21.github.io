@@ -74,7 +74,7 @@ h1 {
 /* links */
 a {
 	font-weight: bold;
-	color: var(--darkblue);
+	color: #666;
 	text-decoration: none;
 }
 a:not(.project-desc-link) {
@@ -83,7 +83,7 @@ a:not(.project-desc-link) {
 a:hover,
 a:focus,
 a:active {
-	color: var(--darkblue);
+	color: #666;
 	text-decoration: none;
 	outline: none;
 }
@@ -135,9 +135,11 @@ a:hover:before {
 	z-index: 100;
 	background-color: #333;
 	overflow-x: hidden;
-	padding-top: 5rem;
+	padding-top: 6rem;
 	transition: 0.2s ease-in-out;
-	border-right: 4px solid #eee;
+	border-right: 4px solid #333;
+	/* box-shadow: 4px 0px 8px #999; */
+	text-align: left;
 }
 #sidebar a {
 	padding: 1rem;
