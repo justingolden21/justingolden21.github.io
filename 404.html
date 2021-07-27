@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Justin Golden's Portfolio</title>
+	<head>
+		<title>Justin Golden's Portfolio</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-	<meta name="title=" content="Justin Golden's Portfolio">
-	<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+		<meta name="title=" content="Justin Golden's Portfolio" />
+		<meta name="robots" content="noindex" />
 
-	<meta name="theme-color" content="#333">
-	<meta name="msapplication-navbutton-color" content="#333">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#333">
+		<meta name="theme-color" content="#333" />
+		<meta name="msapplication-navbutton-color" content="#333" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#333" />
 
-	<!-- font awesome, bootstrap, jquery, popper -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<!-- font awesome, bootstrap, jquery, popper -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+			integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-	<!-- local links -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body class="text-center" style="font-size: 150%;">
+		<!-- local links -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body class="text-center" style="font-size: 125%">
+		<img width="128px" src="img/profile/3.png" draggable="false" />
+		<h1>404 Not Found &mdash; justingolden.me</h1>
+		<p>
+			The requested resource was not found. Perhaps it was removed or you
+			entered the wrong website address.
+		</p>
+		<hr />
 
-	<img width="128px" src="img/profile/3.png" draggable="false">
-	<h1>404 Not Found &mdash; justingolden.me</h1>
-	<p>The requested resource was not found. Perhaps it was removed or you entered the wrong website address.</p>
-	<hr>
+		<p>If you'd like to go home, please click the button below:</p>
+		<button
+			onclick="window.open('index.html', '_self');"
+			class="btn btn-dark btn-lg my-2"
+		>
+			<i class="fas fa-home"></i> Home
+		</button>
 
-	<p>If you'd like to go home, please click the button below:</p>
-	<button onclick="window.open('index.html', '_self');" class="btn btn-dark btn-lg my-2"><i class="fas fa-home"></i> Home</button>
+		<br /><br />
+		<p>If you believe this is a mistake, feel free to email me:</p>
+		<button
+			onclick="window.open('mailto:justingolden@rgbstudios.org', '_blank');"
+			class="btn btn-dark btn-lg my-2"
+		>
+			<i class="fas fa-envelope"></i> Contact
+		</button>
 
-	<br><br>
-	<p>If you believe this is a mistake, feel free to email me:</p>
-	<button onclick="window.open('mailto:justingolden@rgbstudios.org', '_blank');" class="btn btn-dark btn-lg my-2"><i class="fas fa-envelope"></i> Contact</button>
+		<br /><br />
+		<p>If all else fails, click the mysterious button below:</p>
+		<button
+			onclick="$('#happy-p').css('display','block');"
+			class="btn btn-dark btn-lg my-2"
+		>
+			<i class="fas fa-question"></i> Button
+		</button>
 
-	<br><br>
-	<p>If all else fails, click the mysterious button below:</p>
-	<button onclick="$('#happy-p').css('display','block');" class="btn btn-dark btn-lg my-2"><i class="fas fa-question"></i> Button</button>
-
-	<p id="happy-p" style="display:none;font-style:italic;">Have an awesome day <i class="fas fa-2x fa-grin-stars"></i></p>
-
-</body>
+		<p id="happy-p" style="display: none; font-style: italic">
+			Have an awesome day <i class="fas fa-2x fa-grin"></i>
+		</p>
+	</body>
 </html>

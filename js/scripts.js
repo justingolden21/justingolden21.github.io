@@ -1,9 +1,12 @@
 $(() => {
+	const color = '#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)];
 	// rand color
-	$('.st0').css(
-		'fill',
-		'#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)]
-	);
+	$('.st0').css('fill', color);
+
+	// setTimeout(
+	// 	() => $('#profile-img').css('box-shadow', `0.5rem 0px 0px ${color}`),
+	// 	4000
+	// );
 
 	// make and rotate tags
 	// tagCols is for random but even distribution of tags per column
@@ -60,7 +63,7 @@ $(() => {
 	} else {
 		$('.nametag-text').css('display', 'none');
 
-		$('#fade-in-heading')
+		$('#name-heading')
 			.css('opacity', 0)
 			.hide()
 			.slideDown(1000)
@@ -68,6 +71,8 @@ $(() => {
 				{ opacity: 1 },
 				{ queue: true, duration: 2000, easing: 'easeOutQuad' }
 			);
+
+		$('.paragraphs').hide().delay(1500).fadeIn(500);
 
 		// using jquery UI for easing function easeOutQuad, can remove this (use "swing" instead) and remove the CDN
 	}

@@ -9,13 +9,18 @@
 	--orange: #faa74a;
 }
 ::-moz-selection {
-	background: #ccc;
+	background: var(--lightblue);
 }
 ::selection {
-	background: #ccc;
+	background: var(--lightblue);
 }
 .btn {
 	border-radius: 0;
+	padding: 0.5rem 1rem;
+}
+.btn-dark:hover {
+	/* box-shadow: 0.25rem 0.25rem #999; */
+	box-shadow: 0.25rem 0.25rem 0px var(--lightblue);
 }
 body {
 	margin: 2.5rem;
@@ -37,29 +42,33 @@ hr {
 	margin-right: 0.25rem;
 	margin-left: 0.25rem;
 	width: 12rem;
-	box-shadow: 0.5rem 0px 0px #333;
+	box-shadow: 0.5rem 0px 0px #666;
 	border: 2px solid #fff;
 	border-radius: 50%;
-	transition: 0.1s ease-in-out;
-
-	/* animation: saturateImg 3s ease-in-out;
-
-	animation-delay: 0.5s;
-	animation-fill-mode: forwards;
-	filter: grayscale(1); */
+	transition: 0.2s linear;
+}
+#profile-img.animated {
+	animation: saturateImg 5s linear;
 }
 
-/* @keyframes saturateImg {
+@keyframes saturateImg {
 	from {
 		filter: grayscale(1);
 	}
 	to {
 		filter: grayscale(0);
 	}
-} */
+}
 
 h1 {
+	font-size: 3rem;
 	letter-spacing: 0.25rem;
+}
+#name-heading {
+	transition: text-shadow 0.2s linear;
+}
+#name-heading:hover {
+	text-shadow: 0.25rem 0.25rem var(--lightblue);
 }
 
 /* links */

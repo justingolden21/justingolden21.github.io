@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
-		<div id="top-container" class="container">
+		<div id="top-container">
 			<button
 				id="menu-btn"
 				class="hamburger hamburger--squeeze btn"
@@ -76,6 +76,7 @@
 					<!-- need raw svg data for animation to work -->
 					<svg
 						id="profile-img"
+						class="animated"
 						version="1.1"
 						id="Layer_1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -659,10 +660,10 @@
 			<div id="nametag">
 				<h3 class="nametag-text">Hello</h3>
 				<h5 class="nametag-text">my name is</h5>
-				<h1 id="fade-in-heading">Justin Golden</h1>
+				<h1 id="name-heading">Justin Golden</h1>
 			</div>
 
-			<h5 class="my-3">
+			<h5 class="my-3 font-weight-light">
 				Programmer. &nbsp; Writer. &nbsp; Graphic Designer.
 			</h5>
 
@@ -699,8 +700,9 @@
 			<button
 				onclick="window.open('projects.html','_self')"
 				class="btn btn-dark my-3 px-4"
+				style="letter-spacing: 0.1rem"
 			>
-				View My Projects
+				View Projects
 			</button>
 
 			<hr />
