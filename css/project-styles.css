@@ -1,30 +1,27 @@
 .project-div {
-	padding: 10px;
+	padding: 12px;
 	/*border: 2px solid #333;*/
 	cursor: pointer;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 6px;
 }
 .project-div:hover {
 	background-color: #ccc;
-}
-.project-title a {
-	font-weight: bold;
-	color: #666;
-	text-decoration: none;
-	padding: 2px;
 }
 .project-div:hover .project-title a {
 	color: #333;
 	text-decoration: underline;
 }
 .project-icon {
-	margin-top: 10px;
+	margin-top: 12px;
 	width: 64px;
 }
-.project-desc, .project-details, .project-features, .project-tech {
+.project-desc,
+.project-details,
+.project-features,
+.project-tech {
 	padding: 20px;
-	padding-top: 10px;
+	padding-top: 8px;
 	text-align: left;
 }
 .project-screenshot {
@@ -37,7 +34,8 @@
 .project-div:hover .project-details {
 	display: inline;
 }
-.project-details a, .project-desc-link {
+.project-details a,
+.project-desc-link {
 	font-weight: bold;
 }
 
@@ -63,20 +61,22 @@
 	color: #333;
 }
 .close:focus {
-	box-shadow: 0 0 0 0.2rem rgba(51,51,51,.25);
+	box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
 	outline: none;
 }
 .modal-content h3 {
 	color: #666;
 }
 
-@media only screen and (max-width: 768px) { /* md */
+@media only screen and (max-width: 768px) {
+	/* md */
 	.project-screenshot {
 		/* centered */
 		margin: 10px auto;
 		display: block;
 	}
-	.project-desc, .project-details {
+	.project-desc,
+	.project-details {
 		padding: 15px;
 	}
 }

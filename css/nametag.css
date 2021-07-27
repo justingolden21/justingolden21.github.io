@@ -1,8 +1,8 @@
 #nametag {
 	margin: auto;
 	width: 400px;
-	padding-top: 10px;
-	padding-bottom: 50px;
+	padding-top: 16px;
+	padding-bottom: 48px;
 	border-radius: 20px;
 	background-color: #c33;
 }
@@ -16,7 +16,8 @@
 }
 
 /* media */
-@media screen and (max-width: 768px) { /*md*/
+@media screen and (max-width: 768px) {
+	/*md*/
 	#nametag {
 		width: 60vw;
 	}
