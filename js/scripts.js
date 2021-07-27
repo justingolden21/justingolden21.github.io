@@ -54,7 +54,7 @@ $(() => {
 	);
 
 	// nametag (randomly appears)
-	if (Math.random() > 0.95) {
+	if (false && Math.random() > 0.95) {
 		// yes, seriously
 		$('#nametag-css').attr('href', 'css/nametag.css');
 	} else {

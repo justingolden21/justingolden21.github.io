@@ -2,6 +2,12 @@
 * {
 	font-family: Roboto, Arial;
 }
+:root {
+	--yellow: #fed600;
+	--lightblue: #91d8f7;
+	--darkblue: #485e88;
+	--orange: #faa74a;
+}
 ::-moz-selection {
 	background: #ccc;
 }
@@ -18,10 +24,14 @@ hr {
 	border-width: 2px;
 }
 
+.paragraphs {
+	line-height: 1.75rem;
+}
+
 /* top */
 #top-container {
 	text-align: center;
-	margin: 2.5rem;
+	margin: 3rem;
 }
 #profile-img {
 	margin-right: 0.25rem;
@@ -32,21 +42,21 @@ hr {
 	border-radius: 50%;
 	transition: 0.1s ease-in-out;
 
-	animation: saturateImg 3s ease-in-out;
+	/* animation: saturateImg 3s ease-in-out;
 
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
-	filter: grayscale(1);
+	filter: grayscale(1); */
 }
 
-@keyframes saturateImg {
+/* @keyframes saturateImg {
 	from {
 		filter: grayscale(1);
 	}
 	to {
 		filter: grayscale(0);
 	}
-}
+} */
 
 h1 {
 	letter-spacing: 0.25rem;
@@ -55,7 +65,7 @@ h1 {
 /* links */
 a {
 	font-weight: bold;
-	color: #666;
+	color: var(--darkblue);
 	text-decoration: none;
 }
 a:not(.project-desc-link) {
@@ -64,7 +74,7 @@ a:not(.project-desc-link) {
 a:hover,
 a:focus,
 a:active {
-	color: #999;
+	color: var(--darkblue);
 	text-decoration: none;
 	outline: none;
 }
@@ -80,7 +90,7 @@ a:before {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #ccc;
+	background-color: var(--lightblue);
 	/*visibility: hidden;*/
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -114,10 +124,10 @@ a:hover:before {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	background-color: #fffc;
+	background-color: #333;
 	overflow-x: hidden;
 	padding-top: 5rem;
-	transition: 0.25s ease-in-out;
+	transition: 0.2s ease-in-out;
 	border-right: 4px solid #eee;
 }
 #sidebar a {
@@ -125,21 +135,22 @@ a:hover:before {
 	text-decoration: none;
 	font-size: 1.25rem;
 	display: block;
-	color: #333;
+	color: #fff;
 	border: 4px solid transparent;
+	transition: all, 0.2s linear;
 }
 #sidebar a:hover,
 #sidebar a:focus {
-	background-color: #333;
-	color: #fff;
+	background-color: #fff;
+	color: #333;
 	outline: none;
 }
 #sidebar a.active {
-	background-color: #666;
-	color: #fff;
+	background-color: #ffff;
+	color: #333;
 }
 #sidebar a:focus {
-	border-color: #999;
+	border-color: #666;
 }
 
 .tag-col p {
@@ -178,9 +189,8 @@ a:hover:before {
 	}
 }
 
-/* media */
 @media screen and (max-width: 768px) {
-	/*md*/
+	/* md */
 	.tag-col br {
 		display: none !important;
 	}
@@ -192,5 +202,11 @@ a:hover:before {
 	#profile-img {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 576px) {
+	/* xs */
+	.tag-col p {
+		display: none;
 	}
 }

@@ -2,7 +2,7 @@
 
 .project-div {
 	background-color: transparent;
-	height: 224px;
+	height: 256px;
 	perspective: 1000px; /* 3D effect */
 }
 .project-div-inner {
