@@ -1,9 +1,9 @@
 .project-div {
-	padding: 12px;
-	/*border: 2px solid #333;*/
+	padding: 8px;
+	/* border: 2px solid #eee; */
 	cursor: pointer;
 	text-align: center;
-	border-radius: 6px;
+	border-radius: 4px;
 }
 .project-div:hover {
 	background-color: #ccc;
@@ -20,7 +20,7 @@
 .project-details,
 .project-features,
 .project-tech {
-	padding: 20px;
+	padding: 12px;
 	padding-top: 8px;
 	text-align: left;
 }
@@ -51,20 +51,21 @@
 
 /* modals */
 .modal-content {
-	border: 2px solid #999;
+	border: none;
 	border-radius: 0;
 }
 .modal-header {
-	border-bottom: 2px solid #999;
+	border-bottom: 2px solid #ccc;
 }
 .close {
-	color: #666;
+	color: #333;
 	opacity: 1 !important;
 	box-shadow: none;
 	font-size: 200%;
 }
 .close:hover {
-	color: #333;
+	color: #fff;
+	background-color: #333;
 }
 .close:focus {
 	box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
@@ -76,13 +77,38 @@
 
 .view-project {
 	border: 2px solid #666;
-	padding: 0.25rem;
+	padding: 0.125rem;
 	display: block;
 	letter-spacing: 0.1rem;
 	font-weight: 400 !important;
 	text-align: center;
 	color: #666;
 	margin-top: 1rem;
+}
+.view-project-in-card {
+	padding: 0.25rem;
+	display: block;
+	letter-spacing: 0.1rem;
+	font-weight: 400 !important;
+	text-align: center;
+	color: #666;
+
+	background-color: #fff;
+	position: absolute;
+	bottom: 0.5rem;
+	border-bottom-width: 0.5rem;
+	left: 0;
+	right: 0;
+
+	opacity: 0.75;
+	transition: opacity 0.2s linear;
+}
+.view-project:before,
+.view-project-in-card:before {
+	background-color: #333;
+}
+.view-project-in-card:hover {
+	opacity: 1;
 }
 
 #profile-img {
@@ -91,6 +117,14 @@
 }
 #profile-img:hover {
 	transform: scale(1.05);
+}
+
+.link-btn:before {
+	background-color: transparent;
+}
+.link-btn,
+.link-btn:hover {
+	border: 2px solid #fff;
 }
 
 @media only screen and (max-width: 768px) {

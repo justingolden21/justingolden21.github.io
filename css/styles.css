@@ -18,6 +18,9 @@
 	border-radius: 0;
 	padding: 0.5rem 1rem;
 }
+.btn-dark {
+	background-color: #333;
+}
 .btn-dark:hover {
 	/* box-shadow: 0.25rem 0.25rem #999; */
 	box-shadow: 0.25rem 0.25rem 0px var(--lightblue);
@@ -77,7 +80,7 @@ a {
 	color: #666;
 	text-decoration: none;
 }
-a:not(.project-desc-link) {
+a:not(.project-desc-link):not(.view-project-in-card) {
 	position: relative;
 }
 a:hover,
@@ -164,8 +167,8 @@ a:hover:before {
 	border-color: #666;
 }
 
-.tag-col p {
-	color: #666;
+.tag-col a {
+	color: #999;
 }
 
 /* tooltips */

@@ -72,7 +72,7 @@ $(() => {
 				{ queue: true, duration: 2000, easing: 'easeOutQuad' }
 			);
 
-		$('.paragraphs').hide().delay(1500).fadeIn(500);
+		$('.fade-in-text').hide().delay(1500).fadeIn(500);
 
 		// using jquery UI for easing function easeOutQuad, can remove this (use "swing" instead) and remove the CDN
 	}

@@ -1,5 +1,7 @@
 const PROJECT_TYPES = 'web app, chrome extension, website'.split(',');
 //todo add: android app, youtube tutorial, program, script, article, graphic design, story
+// todo: add github links
+// todo: searchable projects
 
 const PROJECTS = [
 	{
@@ -148,7 +150,7 @@ const PROJECTS = [
 		screenshot: 'img/projects/base-converter-screenshot.jpg',
 		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/base-convert/',
-		desc: 'is a website that lets users quickly convert numbers between binary, octal, decimal, and hex.',
+		desc: 'is a tool for quickly converting numbers between binary, octal, decimal, and hex.',
 		features:
 			'Type your number and the other inputs instantly update. You can use the arrow keys in any input. There is a quick reference table, which is available for download, and also highlights with your input. There is a button to print the chart, and the conversion history is displayed below. There is an arithmetic modal that lets users perform mathematical functions and convert bewteen bases, such as adding a base 2 and base 8 number, and getting the result in base 16.',
 		tech: 'The website is made with my usual preference: a mix of jQuery, Bootstrap, and Font Awesome. The website is also available as a PWA (pregressive web app), and features an easy-to-use interface for mobile.',
@@ -176,7 +178,7 @@ const PROJECTS = [
 		screenshot: 'img/projects/chess-screenshot.png',
 		screenshotIsLong: true,
 		link: 'https://justingolden.me/chess/',
-		desc: 'is a website for playing chess built with chess.js and chessboard.js, meant for on-the-go mobile play on one device.',
+		desc: 'is a website for playing chess designed for on-the-go mobile play on one device.',
 		features:
 			'Chess features draggable pieces, hover to show legal moves, captured pieces, move history, options for rotating the board after moves, options to export the FEN or PGN, import a FEN or PGN, undo or redo moves, a sandbox mode, and of course, a dark theme.',
 		tech: 'This website was made with chess.js and chessboard.js, and uses TailwindCSS and its colors, as well as icons from both Font Awesome and Hero Icons. (favicon from Font Awesome)',
@@ -190,7 +192,7 @@ const PROJECTS = [
 		screenshot: 'img/projects/hollow-knight-screenshot.png',
 		screenshotIsLong: true,
 		link: 'https://justingolden.me/hollowknight/',
-		desc: 'is an easy to use quick reference guide for charms in the game Hollow Knight',
+		desc: 'is a quick reference guide for charms in the game Hollow Knight.',
 		features:
 			'Click on a charm to view information about it such as notch cost, price, location, backstory, effects, and more. You can hover over the spoiler to reveal how to acquire it, and filter charms by category as well.',
 		tech: "This website was made with Bootstrap and jQuery, and icons from Font Awesome. I'm using the game images from the wiki.",
@@ -318,6 +320,11 @@ $(() => {
 			'</a> ' +
 			PROJECTS[i].desc +
 			'</p>' +
+			'<a class="view-project-in-card" style="border-bottom-color: ' +
+			PROJECTS[i].color +
+			'" href="' +
+			PROJECTS[i].link +
+			'" target="_blank" tabindex="-1">View this project</a>' +
 			'</div>' +
 			'</div>' +
 			'</div>';
@@ -338,7 +345,7 @@ $(() => {
 			'<button type="button" class="close" data-dismiss="modal">&times;</button>' +
 			'</div>' +
 			'<div class="modal-body">' +
-			'<h3 class="text-center">Overview<br></h3>' +
+			'<h3>Overview<br></h3>' +
 			(!PROJECTS[i].screenshotIsLong
 				? '<div class="row">' +
 				  '<div class="col-lg-7 col-md-6">' +
@@ -346,7 +353,7 @@ $(() => {
 				  PROJECTS[i].screenshot +
 				  '">' +
 				  '</div><div class="col-lg-5 col-md-6">' +
-				  '<h3 class="text-center">Features</h3>' +
+				  '<h3>Features</h3>' +
 				  '<p class="project-details">' +
 				  PROJECTS[i].features +
 				  ' <a class="view-project" href="' +
@@ -359,18 +366,18 @@ $(() => {
 				: '<img class="project-screenshot" src="' +
 				  PROJECTS[i].screenshot +
 				  '">' +
-				  '<br><br><h3 class="text-center">Features</h3>' +
+				  '<br><br><h3>Features</h3>' +
 				  '<p class="project-details">' +
 				  PROJECTS[i].features +
 				  ' <a class="view-project" href="' +
 				  PROJECTS[i].link +
 				  '" target="_blank">View this project </a>' +
 				  '</p>') +
-			'<h3 class="text-center">Story</h3>' +
+			'<h3>Story</h3>' +
 			'<p class="project-features">' +
 			PROJECTS[i].story +
 			'</p>' +
-			'<h3 class="text-center">Tech</h3>' +
+			'<h3>Tech</h3>' +
 			'<p class="project-tech">' +
 			PROJECTS[i].tech +
 			'</p>' +
@@ -378,6 +385,6 @@ $(() => {
 			'</div>' +
 			'</div>' +
 			'</div>';
-		$('#' + PROJECTS[i].type.replace(' ', '-') + '-div').append(tmpHTML);
+		$('#' + PROJECTS[i].type.replace(' ', '-') + 's').append(tmpHTML);
 	}
 });
