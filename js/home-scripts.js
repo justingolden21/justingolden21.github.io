@@ -27,9 +27,9 @@ $(() => {
 		// %23 is "#"
 		$('#tag-col-' + tagCols[i]).append(
 			`<p style="transform:rotate(${random(-5, 5)}deg);">
-				<a href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
-				TAGS[i]
-			}</a>
+				<a rel="noopener" href="https://www.google.com/search?q=%23${
+					TAGS[i]
+				}" target="_blank">#${TAGS[i]}</a>
 			</p>`
 		);
 	}
