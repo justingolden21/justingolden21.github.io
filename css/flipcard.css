@@ -42,3 +42,10 @@
 	background-color: #fff;
 	border-radius: 12px;
 }
+
+@media screen and (max-width: 768px) {
+	/* md */
+	.project-div .project-div-inner {
+		transform: rotateY(180deg);
+	}
+}
