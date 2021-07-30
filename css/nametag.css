@@ -1,16 +1,16 @@
 #nametag {
 	margin: auto;
-	width: 400px;
-	padding-top: 16px;
-	padding-bottom: 48px;
-	border-radius: 20px;
-	background-color: #c33;
+	width: 24rem;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	border-radius: 1.25rem;
+	background-color: #333;
 }
 .nametag-text {
 	color: #fff;
 }
 #nametag h1 {
-	padding: 20px;
+	padding: 1.25rem;
 	background-color: #fff;
 	width: 100%;
 }

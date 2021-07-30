@@ -1,5 +1,8 @@
 todo later:
 use http://realfavicongenerator.net
+replace jquery with umbrella js and vanilla js
+remove bootstrap and popper? eh
+remove font awesome (download SVGs)
 
 dumb ideas:
 1/1000 chance of breakout? add as a query param? q=breakout

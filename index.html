@@ -30,7 +30,6 @@
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -40,6 +39,7 @@
 		<!-- local links -->
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link id="nametag-css" rel="stylesheet" type="text/css" href="" />
+		<script type="text/javascript" src="js/home-scripts.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
@@ -663,52 +663,52 @@
 				<h1 id="name-heading">Justin Golden</h1>
 			</div>
 
-			<h5 class="my-3 font-weight-light">
-				Programmer. &nbsp; Writer. &nbsp; Graphic Designer.
-			</h5>
+			<!-- Programmer. &nbsp; Writer. &nbsp; Graphic Designer. -->
+			<h5 id="subtitle" class="my-3 font-weight-light"></h5>
+			<div id="top-btns">
+				<button
+					id="mail-btn"
+					class="btn btn-dark mx-2"
+					title="Email me at justingolden@rgbstudios.org"
+					data-toggle="tooltip"
+					data-placement="bottom"
+				>
+					<i id="envelope-icon" class="fas fa-envelope"></i>
+				</button>
+				<button
+					id="linkedin-btn"
+					class="btn btn-dark mx-2"
+					title="View my LinkedIn"
+					data-toggle="tooltip"
+					data-placement="bottom"
+				>
+					<i class="fab fa-linkedin"></i>
+				</button>
+				<button
+					id="github-btn"
+					class="btn btn-dark mx-2"
+					title="View my GitHub"
+					data-toggle="tooltip"
+					data-placement="bottom"
+				>
+					<i class="fab fa-github"></i>
+				</button>
 
-			<button
-				id="mail-btn"
-				class="btn btn-dark mx-2"
-				title="Email me at justingolden@rgbstudios.org"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i id="envelope-icon" class="fas fa-envelope"></i>
-			</button>
-			<button
-				id="linkedin-btn"
-				class="btn btn-dark mx-2"
-				title="View my LinkedIn"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i class="fab fa-linkedin"></i>
-			</button>
-			<button
-				id="github-btn"
-				class="btn btn-dark mx-2"
-				title="View my GitHub"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i class="fab fa-github"></i>
-			</button>
+				<br />
 
-			<br />
-
-			<button
-				onclick="window.open('projects.html','_self')"
-				class="btn btn-dark my-3 px-4"
-				style="letter-spacing: 0.1rem"
-			>
-				View Projects
-			</button>
+				<button
+					onclick="window.open('projects.html','_self')"
+					class="btn btn-dark my-3 px-4"
+					style="letter-spacing: 0.1rem"
+				>
+					View Projects
+				</button>
+			</div>
 
 			<hr />
 
-			<div class="text-left paragraphs fade-in-text">
-				<h6>About</h6>
+			<div class="text-left fade-in-text">
+				<h3>About</h3>
 				<p class="my-3">
 					I am a full stack web and mobile developer located in San
 					Diego, CA. I graduated from San Diego State University with
@@ -720,7 +720,7 @@
 					<a href="projects.html">projects</a>. You can contact me
 					using the buttons above.
 				</p>
-				<h6>Interests</h6>
+				<h3>Interests</h3>
 				<p class="my-3">
 					I like to write, edit videos, and design logos, brand
 					identity systems, and application mockups. I enjoy all

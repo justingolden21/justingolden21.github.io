@@ -1,38 +1,6 @@
 $(() => {
-	const color = '#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)];
-	// rand color
-	$('.st0').css('fill', color);
+	// ==== Link Buttons ====
 
-	// setTimeout(
-	// 	() => $('#profile-img').css('box-shadow', `0.5rem 0px 0px ${color}`),
-	// 	4000
-	// );
-
-	// make and rotate tags
-	// tagCols is for random but even distribution of tags per column
-	const TAGS =
-		'WebDesign UI UX GraphicDesign LogoDesign Branding Typography HTML CSS JS jQuery Bootstrap Sass Jekyll Svelte AlpineJS TailwindCSS NoSQL Android MobileApps Firebase PWA SEO Writing VideoEditing'.split(
-			' '
-		);
-	let tagCols = [];
-	for (let i = 0; i < Math.ceil(TAGS.length / 4); i++) {
-		tagCols = tagCols.concat([1, 2, 3, 4]);
-	}
-	shuffle(tagCols);
-	for (let i = 0; i < TAGS.length; i++) {
-		// %23 is "#"
-		$('#tag-col-' + tagCols[i]).append(
-			'<p style="transform:rotate(' +
-				random(-5, 5) +
-				'deg);"><a href="https://www.google.com/search?q=%23' +
-				TAGS[i] +
-				'" target="_blank"><i><b> #' +
-				TAGS[i] +
-				' </b></a></i></p>'
-		);
-	}
-
-	// link btns
 	$('#mail-btn').click(() =>
 		window.open('mailto:justingolden@rgbstudios.org', '_blank')
 	);
@@ -44,7 +12,8 @@ $(() => {
 	);
 	$('[data-toggle="tooltip"]').tooltip();
 
-	// animated envelope icon
+	// ==== Animated Envelope Icon ====
+
 	$('#mail-btn').mouseover(() =>
 		$('#envelope-icon')
 			.removeClass('fa-envelope')
@@ -56,33 +25,18 @@ $(() => {
 			.addClass('fa-envelope')
 	);
 
-	// nametag (randomly appears)
-	if (false && Math.random() > 0.95) {
-		// yes, seriously
-		$('#nametag-css').attr('href', 'css/nametag.css');
-	} else {
-		$('.nametag-text').css('display', 'none');
+	// ==== Sidebar ====
 
-		$('#name-heading')
-			.css('opacity', 0)
-			.hide()
-			.slideDown(1000)
-			.animate(
-				{ opacity: 1 },
-				{ queue: true, duration: 2000, easing: 'easeOutQuad' }
-			);
-
-		$('.fade-in-text').hide().delay(1500).fadeIn(500);
-
-		// using jquery UI for easing function easeOutQuad, can remove this (use "swing" instead) and remove the CDN
-	}
-
-	// side menu
 	$('#menu-btn').click(toggleNav);
 	$('#sidebar a').attr('tabindex', '-1');
+
+	// esc to close sidebar
+	document.body.addEventListener('keydown', function (e) {
+		if (e.key == 'Escape' && navIsOpen) $('#menu-btn').click();
+	});
 });
 
-// side menu
+// ==== Sidebar ====
 
 let navIsOpen = false;
 
@@ -96,6 +50,7 @@ function toggleNav() {
 
 function openNav() {
 	$('#sidebar').css('width', '16rem');
+	$('#sidebar').css('border-right', '0.25rem solid #333');
 	$('#sidebar a').css('display', 'none');
 	$('#sidebar a').attr('tabindex', '');
 	let mils = parseFloat($('#sidebar').css('transition-duration')) * 1000;
@@ -106,16 +61,14 @@ function openNav() {
 
 function closeNav() {
 	$('#sidebar').css('width', '0px');
+	$('#sidebar').css('border-right', '');
+
 	$('#sidebar a').css('display', 'none');
 	$('#sidebar a').attr('tabindex', '-1');
 }
 
-// utility
+// ==== Utility ====
 
-function random(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function shuffle(arr) {
-	arr.sort(() => Math.random() - 0.5);
-}
+const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);

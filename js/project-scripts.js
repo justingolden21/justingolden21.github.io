@@ -1,6 +1,6 @@
 const PROJECT_TYPES = 'web app, chrome extension, website'.split(',');
 //todo add: android app, youtube tutorial, program, script, article, graphic design, story
-// todo: add github links
+// todo: add github links, add tags to projects
 // todo: searchable projects
 
 const PROJECTS = [
@@ -285,106 +285,74 @@ const PROJECTS = [
 ];
 
 $(() => {
-	// rand img
-	$('#profile-img').prop(
-		'src',
-		'img/profile/' + Math.ceil(Math.random() * 4) + '.png'
-	);
-
 	$('#profile-img').click(() => window.open('index.html', '_self'));
 
-	for (let i = 0; i < PROJECTS.length; i++) {
-		let tmpHTML =
-			'<div class="project-div col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal-' +
-			i +
-			'">' +
-			'<div class="project-div-inner">' +
-			'<div class="project-div-front">' +
-			'<img class="project-icon" src="' +
-			PROJECTS[i].icon +
-			'">' +
-			'<h3 class="project-title">' +
-			PROJECTS[i].name +
-			'</h3>' +
-			'</div>' +
-			'<div class="project-div-back" style="background-color:' +
-			PROJECTS[i].color +
-			';">' +
-			'<img class="project-icon" src="' +
-			PROJECTS[i].icon +
-			'">' +
-			'<p class="project-desc"><a class="project-desc-link" href="' +
-			PROJECTS[i].link +
-			'" target="_blank" tabindex="-1">' +
-			PROJECTS[i].name +
-			'</a> ' +
-			PROJECTS[i].desc +
-			'</p>' +
-			'<a class="view-project-in-card" style="border-bottom-color: ' +
-			PROJECTS[i].color +
-			'" href="' +
-			PROJECTS[i].link +
-			'" target="_blank" tabindex="-1">View this project</a>' +
-			'</div>' +
-			'</div>' +
-			'</div>';
-		tmpHTML +=
-			'<div class="modal fade" id="modal-' +
-			i +
-			'">' +
-			'<div class="modal-dialog modal-lg">' +
-			'<div class="modal-content">' +
-			'<div class="modal-header">' +
-			'<h4 class="modal-title">' +
-			'<img class="project-icon" src="' +
-			PROJECTS[i].icon +
-			'">' +
-			' ' +
-			PROJECTS[i].name +
-			'</h4>' +
-			'<button type="button" class="close" data-dismiss="modal">&times;</button>' +
-			'</div>' +
-			'<div class="modal-body">' +
-			'<h3>Overview<br></h3>' +
-			(!PROJECTS[i].screenshotIsLong
-				? '<div class="row">' +
-				  '<div class="col-lg-7 col-md-6">' +
-				  '<img class="project-screenshot" src="' +
-				  PROJECTS[i].screenshot +
-				  '">' +
-				  '</div><div class="col-lg-5 col-md-6">' +
-				  '<h3>Features</h3>' +
-				  '<p class="project-details">' +
-				  PROJECTS[i].features +
-				  ' <a class="view-project" href="' +
-				  PROJECTS[i].link +
-				  '" target="_blank">View this project </a>' +
-				  '</p>' +
-				  '</div>' +
-				  '</div>' +
-				  '<br>'
-				: '<img class="project-screenshot" src="' +
-				  PROJECTS[i].screenshot +
-				  '">' +
-				  '<br><br><h3>Features</h3>' +
-				  '<p class="project-details">' +
-				  PROJECTS[i].features +
-				  ' <a class="view-project" href="' +
-				  PROJECTS[i].link +
-				  '" target="_blank">View this project </a>' +
-				  '</p>') +
-			'<h3>Story</h3>' +
-			'<p class="project-features">' +
-			PROJECTS[i].story +
-			'</p>' +
-			'<h3>Tech</h3>' +
-			'<p class="project-tech">' +
-			PROJECTS[i].tech +
-			'</p>' +
-			'</div>' +
-			'</div>' +
-			'</div>' +
-			'</div>';
-		$('#' + PROJECTS[i].type.replace(' ', '-') + 's').append(tmpHTML);
+	for (let project of PROJECTS) {
+		const id = project.name.toLowerCase().replace(/ /g, '-');
+		let tmpHTML = `
+		<div class="project-div col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal-${id}">
+			<div class="project-div-inner">
+				<div class="project-div-front">
+					<img class="project-icon" src="${project.icon}">
+					<h3 class="project-title">${project.name}</h3>
+				</div>
+				<div class="project-div-back" style="background-color:${project.color}">
+					<img class="project-icon" src="${project.icon}">
+					<p class="project-desc">
+						<a class="project-desc-link" href="${project.link}" target="_blank" tabindex="-1">${project.name}</a>
+						${project.desc}
+					</p>
+					<a class="view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
+						View this project
+					</a>
+				</div>
+			</div>
+		</div>`;
+
+		tmpHTML += `
+		<div class="modal fade" id="modal-${id}">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">
+							<img class="project-icon" src="${project.icon}">
+							${project.name}
+						</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<h3>Overview</h3>
+		${
+			!project.screenshotIsLong
+				? `
+						<div class="row">
+							<div class="col-lg-7 col-md-6">
+								<img class="project-screenshot" src="${project.screenshot}">
+							</div>
+							<div class="col-lg-5 col-md-6">
+								<h3>Features</h3>
+								<p class="project-details">${project.features}
+									<a class="view-project" href="${project.link}" target="_blank">View this project </a>
+								</p>
+							</div>
+						</div>
+						<br>`
+				: `
+						<img class="project-screenshot" src="${project.screenshot}">
+						<br><br>
+						<h3>Features</h3>
+						<p class="project-details">${project.features}
+							<a class="view-project" href="${project.link}" target="_blank">View this project </a>
+						</p>`
+		}
+						<h3>Story</h3>
+						<p class="project-features">${project.story}</p>
+						<h3>Tech</h3>
+						<p class="project-tech">${project.tech}</p>
+					</div>
+				</div>
+			</div>
+		</div>`;
+		$('#' + project.type.replace(' ', '-') + 's').append(tmpHTML);
 	}
 });
