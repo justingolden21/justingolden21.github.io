@@ -269,6 +269,24 @@ const PROJECTS = [
 		story: 'TailwindCSS has an awesome color palette, but it can be a pain to use if you are not using TailwindCSS. I made this website to solve that problem. I designed the UI to be very friendly and easy to use, and to scale especially well on mobile.',
 	},
 
+	{
+		name: 'Smile',
+		type: 'art',
+		icon: 'img/projects/art/smile-icon.svg',
+		color: '#76489c',
+		imgs: [
+			'img/projects/art/smile.png',
+			'img/projects/art/smile.svg',
+			'img/projects/art/smile-simple.png',
+			'img/projects/art/smile-simple.svg',
+		],
+		desc: 'is a piece of artwork featuring the Gastly evolution line from Pokemon.',
+		descLong:
+			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them.',
+		// TODO: link to video on youtube?
+	},
+	// art has no screenshot, link, features, tech, or story, but has an array of imgs
+
 	// {
 	// 	'name': 'Barcode',
 	// 	'type': 'website',
@@ -299,12 +317,26 @@ $(() => {
 				<div class="project-div-back" style="background-color:${project.color}">
 					<img class="project-icon" src="${project.icon}">
 					<p class="project-desc">
-						<a class="project-desc-link" href="${project.link}" target="_blank" tabindex="-1">${project.name}</a>
+                        ${
+							project.type == 'art'
+								? project.name
+								: `<a
+									class="project-desc-link"
+									href="${project.link}"
+									target="_blank"
+									tabindex="-1"
+								>
+									${project.name}
+								</a>`
+						}
 						${project.desc}
 					</p>
-					<a class="view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
-						View this project
-					</a>
+                    ${
+						project.type == 'art'
+							? ''
+							: `<a class="view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
+                            View this project</a>`
+					}
 				</div>
 			</div>
 		</div>`;
@@ -321,38 +353,89 @@ $(() => {
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
 					<div class="modal-body">
-						<h3>Overview</h3>
+                        ${project.type != 'art' ? `<h3>Overview</h3>` : ''}
 		${
 			!project.screenshotIsLong
 				? `
 						<div class="row">
 							<div class="col-lg-7 col-md-6">
-								<img class="project-screenshot" src="${project.screenshot}">
+                                ${
+									project.type != 'art'
+										? `<img class="project-screenshot" src="${project.screenshot}">`
+										: project.imgs
+												.map(
+													(src) =>
+														`<img src="${src}" style="max-width:75%; margin: 1rem;">`
+												)
+												.join('')
+								}
 							</div>
 							<div class="col-lg-5 col-md-6">
-								<h3>Features</h3>
-								<p class="project-details">${project.features}
-									<a class="view-project" href="${project.link}" target="_blank">View this project </a>
-								</p>
+								
+                            
+                            ${
+								project.type != 'art'
+									? `<h3>Features</h3>
+                                    <p class="project-details">${project.features}
+                                        <a class="view-project" href="${project.link}" target="_blank">View this project </a>
+                                    </p>`
+									: `<h3>About</h3>
+                                    <p class="project-details">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
+							}
+
 							</div>
 						</div>
 						<br>`
 				: `
-						<img class="project-screenshot" src="${project.screenshot}">
-						<br><br>
-						<h3>Features</h3>
-						<p class="project-details">${project.features}
-							<a class="view-project" href="${project.link}" target="_blank">View this project </a>
-						</p>`
+                    ${
+						project.screenshot
+							? `<img class="project-screenshot" src="${project.screenshot}">
+						<br><br>`
+							: ''
+					}
+
+
+                    ${
+						project.type != 'art'
+							? `<h3>Features</h3>
+                            <p class="project-details">${project.features}
+                                <a class="view-project" href="${project.link}" target="_blank">View this project </a>
+                            </p>`
+							: `<h3>About</h3>
+                            <p class="project-details">${project.desc}</p>`
+					}
+                    `
 		}
-						<h3>Story</h3>
-						<p class="project-features">${project.story}</p>
-						<h3>Tech</h3>
-						<p class="project-tech">${project.tech}</p>
+                    ${
+						project.story
+							? `<h3>Story</h3>
+                    <p class="project-features">${project.story}</p>`
+							: ''
+					}
+                    ${
+						project.tech
+							? `<h3>Tech</h3>
+                    <p class="project-tech">${project.tech}</p>`
+							: ''
+					}
 					</div>
 				</div>
 			</div>
 		</div>`;
-		$('#' + project.type.replace(' ', '-') + 's').append(tmpHTML);
+		$(
+			'#' +
+				(project.type != 'art'
+					? project.type.replace(' ', '-') + 's'
+					: project.type)
+		).append(tmpHTML);
+
+		console.log(project.type);
+		if (project.imgs) {
+			console.log(project.imgs);
+			console.log(project.imgs.each);
+			console.log(project.imgs.forEach);
+			console.log(project.imgs.map);
+			console.log(project.imgs.map((src) => `${src} hi`).join(''));
+		}
 	}
 });
