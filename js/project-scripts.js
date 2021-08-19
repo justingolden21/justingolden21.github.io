@@ -282,7 +282,7 @@ const PROJECTS = [
 		],
 		desc: 'is a piece of artwork featuring the Gastly evolution line from Pokemon.',
 		descLong:
-			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them.',
+			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them. <a href="https://youtu.be/6orY3kfmT8I">Watch me create this art</a>.',
 		// TODO: link to video on youtube?
 	},
 	// art has no screenshot, link, features, tech, or story, but has an array of imgs
