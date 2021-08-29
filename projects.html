@@ -1,184 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Justin Golden's Portfolio</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta charset="utf-8" />
-		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-		<meta name="title=" content="Justin Golden's Portfolio" />
-		<meta name="robots" content="index, follow" />
-		<meta name="description" content="Justin Golden's personal portfolio" />
-		<meta
-			name="keywords"
-			content="WebDev, WebDevelopment, WebDeveloper, FrontEnd, FrontEndWebDev, WebDesign"
-		/>
+<head>
+    <title>Justin Golden's Portfolio</title>
 
-		<meta name="theme-color" content="#333" />
-		<meta name="msapplication-navbutton-color" content="#333" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="#333" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <meta name="title=" content="Justin Golden's Portfolio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Justin Golden's personal portfolio" />
+    <meta name="keywords" content="WebDev, WebDevelopment, WebDeveloper, FrontEnd, FrontEndWebDev, WebDesign" />
 
-		<!-- font awesome, bootstrap, jquery, popper -->
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-			integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="theme-color" content="#333" />
+    <meta name="msapplication-navbutton-color" content="#333" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#333" />
 
-		<!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
-		<link rel="stylesheet" type="text/css" href="css/hamburger.css" />
+    <!-- font awesome, bootstrap, jquery, popper -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-		<!-- local links -->
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<link rel="stylesheet" type="text/css" href="css/project-styles.css" />
-		<link rel="stylesheet" type="text/css" href="css/flipcard.css" />
-		<link id="nametag-css" rel="stylesheet" type="text/css" href="" />
-		<script type="text/javascript" src="js/scripts.js"></script>
-		<script type="text/javascript" src="js/project-scripts.js"></script>
-	</head>
-	<body>
-		<div id="top-container">
-			<button
-				id="menu-btn"
-				class="hamburger hamburger--squeeze btn"
-				aria-label="Menu"
-			>
-				<span class="hamburger-box">
-					<span class="hamburger-inner" />
-				</span>
-			</button>
+    <!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
 
-			<nav id="sidebar">
-				<a href="index.html"><i class="fas fa-home"></i> Home</a>
-				<a href="resume.pdf" target="_blank"
-					><i class="fas fa-id-card"></i> R&#233;sum&#233;</a
-				>
-				<a href="#" class="active"
-					><i class="fas fa-drafting-compass"></i> Projects</a
-				>
-				<!-- <a href="#">Clients</a> -->
-			</nav>
+    <!-- local links -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/project-styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/flipcard.css" />
+    <link id="nametag-css" rel="stylesheet" type="text/css" href="" />
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/project-scripts.js"></script>
+</head>
 
-			<img id="profile-img" src="img/profile/3.png" draggable="false" />
-			<h1>Justin Golden</h1>
+<body>
+    <div id="top-container">
+        <button id="menu-btn" class="hamburger hamburger--squeeze btn" aria-label="Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner" />
+            </span>
+        </button>
 
-			<h5 class="my-3 font-weight-light">
-				Programmer. &nbsp; Writer. &nbsp; Graphic Designer.
-			</h5>
+        <nav id="sidebar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="resume.pdf" target="_blank"><i class="fas fa-id-card"></i> R&#233;sum&#233;</a>
+            <a href="#" class="active"><i class="fas fa-drafting-compass"></i> Projects</a>
+            <!-- <a href="#">Clients</a> -->
+        </nav>
 
-			<button
-				id="mail-btn"
-				class="btn btn-dark mx-2"
-				title="Email me"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i id="envelope-icon" class="fas fa-envelope"></i>
-			</button>
-			<button
-				id="linkedin-btn"
-				class="btn btn-dark mx-2"
-				title="View my LinkedIn"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i class="fab fa-linkedin"></i>
-			</button>
-			<button
-				id="github-btn"
-				class="btn btn-dark mx-2"
-				title="View my GitHub"
-				data-toggle="tooltip"
-				data-placement="bottom"
-			>
-				<i class="fab fa-github"></i>
-			</button>
+        <img id="profile-img" src="img/profile/3.png" draggable="false" />
+        <h1>Justin Golden</h1>
 
-			<!-- <hr /> -->
-		</div>
+        <h5 class="my-3 font-weight-light">
+            Programmer. &nbsp; Writer. &nbsp; Graphic Designer.
+        </h5>
 
-		<div class="container">
-			<h3 class="pt-3" style="border-top: 2px solid #eee">Projects</h3>
-			<p
-				class="font-weight-normal py-3"
-				style="border-bottom: 2px solid #eee"
-			>
-				Below you can browse some of my projects. For each project, I am
-				the sole maintainer and creator for the application, as well as
-				any promotional images, icons, assets, descriptions, and videos.
-				<b>Hover or click a project to get started.</b>
-			</p>
-			<div class="mt-2 pt-2">
-				<a class="mr-4" href="#websites">Websites</a>
-				<a class="mr-4" href="#web-apps">Web Apps</a>
-				<a class="mr-4" href="#chrome-extensions">Chrome Extensions</a>
-				<a class="mr-4" href="#art">Art</a>
-			</div>
-			<br />
+        <button id="mail-btn" class="btn btn-dark mx-2" title="Email me" data-toggle="tooltip" data-placement="bottom">
+            <i id="envelope-icon" class="fas fa-envelope"></i>
+        </button>
+        <button id="linkedin-btn" class="btn btn-dark mx-2" title="View my LinkedIn" data-toggle="tooltip"
+            data-placement="bottom">
+            <i class="fab fa-linkedin"></i>
+        </button>
+        <button id="github-btn" class="btn btn-dark mx-2" title="View my GitHub" data-toggle="tooltip"
+            data-placement="bottom">
+            <i class="fab fa-github"></i>
+        </button>
 
-			<div id="projects-div">
-				<div id="websites" class="row">
-					<div class="col-12">
-						<h1>
-							<a
-								class="btn btn-dark mx-2 link-btn"
-								href="#websites"
-							>
-								<i class="fas fa-link"></i>
-							</a>
-							Websites
-						</h1>
-					</div>
-				</div>
-				<div id="web-apps" class="row">
-					<div class="col-12">
-						<h1>
-							<a
-								class="btn btn-dark mx-2 link-btn"
-								href="#web-apps"
-							>
-								<i class="fas fa-link"></i>
-							</a>
-							Web Apps
-						</h1>
-					</div>
-				</div>
-				<div id="chrome-extensions" class="row">
-					<div class="col-12">
-						<h1>
-							<a
-								class="btn btn-dark mx-2 link-btn"
-								href="#chrome-extensions"
-							>
-								<i class="fas fa-link"></i>
-							</a>
-							Chrome Extensions
-						</h1>
-					</div>
-				</div>
-				<div id="art" class="row">
-					<div class="col-12">
-						<h1>
-							<a
-								class="btn btn-dark mx-2 link-btn"
-								href="#art"
-							>
-								<i class="fas fa-link"></i>
-							</a>
-							Art
-						</h1>
-					</div>
-				</div>
-				<!-- todo: android apps, logos, brand identity systems, writings, articles, artwork -->
-			</div>
-		</div>
-	</body>
+        <!-- <hr /> -->
+    </div>
+
+    <div class="container">
+        <h3 class="pt-3" style="border-top: 2px solid #eee">Projects</h3>
+        <p class="font-weight-normal py-3" style="border-bottom: 2px solid #eee">
+            Below you can browse some of my projects. For each project, I am
+            the sole maintainer and creator for the application, as well as
+            any promotional images, icons, assets, descriptions, and videos.
+            <b>Hover or click a project to get started.</b>
+        </p>
+        <div class="mt-2 pt-2">
+            <a class="mr-4" href="#websites">Websites</a>
+            <a class="mr-4" href="#web-apps">Web Apps</a>
+            <a class="mr-4" href="#chrome-extensions">Chrome Extensions</a>
+            <a class="mr-4" href="#art">Art</a>
+        </div>
+        <br />
+
+        <div id="projects-div">
+            <div id="websites" class="row">
+                <div class="col-12">
+                    <h1>
+                        <a class="btn btn-dark mx-2 link-btn" href="#websites">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        Websites
+                    </h1>
+                </div>
+            </div>
+            <div id="web-apps" class="row">
+                <div class="col-12">
+                    <h1>
+                        <a class="btn btn-dark mx-2 link-btn" href="#web-apps">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        Web Apps
+                    </h1>
+                </div>
+            </div>
+            <div id="chrome-extensions" class="row">
+                <div class="col-12">
+                    <h1>
+                        <a class="btn btn-dark mx-2 link-btn" href="#chrome-extensions">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        Chrome Extensions
+                    </h1>
+                </div>
+            </div>
+            <div id="art" class="row">
+                <div class="col-12">
+                    <h1>
+                        <a class="btn btn-dark mx-2 link-btn" href="#art">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        Art
+                    </h1>
+                </div>
+            </div>
+            <!-- todo: android apps, logos, brand identity systems, writings, articles, artwork -->
+        </div>
+    </div>
+</body>
+
 </html>

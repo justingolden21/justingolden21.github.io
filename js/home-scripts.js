@@ -27,9 +27,9 @@ $(() => {
 		// %23 is "#"
 		$('#tag-col-' + tagCols[i]).append(
 			`<p style="transform:rotate(${random(-5, 5)}deg);">
-				<a rel="noopener" href="https://www.google.com/search?q=%23${
-					TAGS[i]
-				}" target="_blank">#${TAGS[i]}</a>
+				<a rel="noopener" href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
+				TAGS[i]
+			}</a>
 			</p>`
 		);
 	}
@@ -40,19 +40,11 @@ $(() => {
 	if (true && Math.random() > 0.95) {
 		$('#nametag-css').attr('href', 'css/nametag.css');
 
-		$('#nametag')
-			.css('opacity', 0)
-			.hide()
-			.slideDown(1000)
-			.animate({ opacity: 1 }, 2000);
+		$('#nametag').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
 	} else {
 		$('.nametag-text').css('display', 'none');
 
-		$('#name-heading')
-			.css('opacity', 0)
-			.hide()
-			.slideDown(1000)
-			.animate({ opacity: 1 }, 2000);
+		$('#name-heading').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
 	}
 
 	// other page load animations
@@ -69,8 +61,7 @@ $(() => {
 	const subtitleTxt = 'Programmer.  Writer.  Graphic Designer.';
 	function typeWriter() {
 		if (subtitleIdx < subtitleTxt.length) {
-			document.getElementById('subtitle').innerHTML +=
-				subtitleTxt.charAt(subtitleIdx);
+			document.getElementById('subtitle').innerHTML += subtitleTxt.charAt(subtitleIdx);
 			subtitleIdx++;
 			setTimeout(typeWriter, random(25, 75));
 		}
