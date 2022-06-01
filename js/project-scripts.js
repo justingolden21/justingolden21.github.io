@@ -6,6 +6,20 @@ const PROJECT_TYPES = 'web app, chrome extension, website'.split(',');
 const PROJECTS = [
 	{
 		name: 'Desktop Clock',
+		type: 'website',
+		icon: 'img/projects/desktopclock-icon.svg',
+		color: '#999',
+		screenshot: 'img/projects/desktopclock-screenshot.jpg',
+		link: 'https://desktopclock.app/',
+		desc: 'is a simple, resizable customizable, installable clock for any device.',
+		features:
+			'Desktop Clock features a fully customizable analog clock with a changable face, hands, ticks, numerals, animation, colors, strokes, and more. You can of course change to a digital display, display the date, time or both, and customize your datetime format. You can change timezones, languages, and datetime locales. You can change the color themes, font families, and which menus and buttons are visible. There is also a worldclock and a stopwatch in the works.',
+		tech: 'I am using Svelte / Svelte Kit and Tailwind, and deploy using Netlify. I use Day JS for the time and date logic, but every component is built from scratch by me. Just like its predecessor, Desktop Clock weighs in at less than 1MB, is ad-free, runs offline, and scales to any screensize without perfectly.',
+		story:
+			"When Google announced they would be shutting down chrome apps, I didn't want to leave my users hanging. I redesigned Desktop Clock from the ground up as a PWA (installable website) and kept every feature I could while adding many more, and completely overhauled both the tech stack and aesthetic"
+	},
+	{
+		name: 'Desktop Clock',
 		type: 'web app',
 		icon: 'img/projects/desktop-clock-icon.svg',
 		color: '#999',
