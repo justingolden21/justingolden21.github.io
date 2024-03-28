@@ -191,6 +191,26 @@ hr {
     }
 }
 
+#top-btns {
+	opacity: 0;
+	animation: slideDown linear 1s;
+	animation-fill-mode: forwards;
+
+	animation-delay: 2.5s;
+
+}
+
+@keyframes slideDown {
+	from {
+	  opacity: 0;
+	  max-height: 0;
+	}
+	to {
+	  opacity: 1;
+	  max-height: 200px; /* Adjust the value to accommodate the content height */
+	}
+  }
+
 /* Colors */
 
 :root {
