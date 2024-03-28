@@ -19,10 +19,10 @@
     <!-- font awesome, bootstrap, jquery, popper -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
     <!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
     <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
@@ -40,7 +40,7 @@
     <div id="top-container">
         <button id="menu-btn" class="hamburger hamburger--squeeze btn" aria-label="Menu">
             <span class="hamburger-box">
-                <span class="hamburger-inner" />
+                <span class="hamburger-inner">
             </span>
         </button>
 
@@ -54,19 +54,17 @@
         <img id="profile-img" src="img/profile/3.png" draggable="false" />
         <h1>Justin Golden</h1>
 
-        <h5 class="font-weight-light" style="margin: 1rem 0;">
+        <h5 style="margin: 1rem 0;">
             Programmer. &nbsp; Writer. &nbsp; Graphic Designer.
         </h5>
 
-        <button id="mail-btn" class="btn btn-dark mx-2" title="Email me" data-toggle="tooltip" data-placement="bottom">
+        <button id="mail-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="Email me">
             <i id="envelope-icon" class="fas fa-envelope"></i>
         </button>
-        <button id="linkedin-btn" class="btn btn-dark mx-2" title="View my LinkedIn" data-toggle="tooltip"
-            data-placement="bottom">
+        <button id="linkedin-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="View my LinkedIn">
             <i class="fab fa-linkedin"></i>
         </button>
-        <button id="github-btn" class="btn btn-dark mx-2" title="View my GitHub" data-toggle="tooltip"
-            data-placement="bottom">
+        <button id="github-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="View my GitHub">
             <i class="fab fa-github"></i>
         </button>
 
@@ -74,56 +72,56 @@
     </div>
 
     <div class="container">
-        <h3 class="pt-3" style="border-top: 2px solid #eee">Projects</h3>
-        <p class="font-weight-normal py-3" style="border-bottom: 2px solid #eee">
+        <h3 style="padding: 1rem 0; border-top: 2px solid #eee">Projects</h3>
+        <p style="padding: 1rem 0; border-bottom: 2px solid #eee">
             Below you can browse some of my projects. For each project, I am
             the sole maintainer and creator for the application, as well as
             any promotional images, icons, assets, descriptions, and videos.
             <b>Hover or click a project to get started.</b>
         </p>
-        <div class="mt-2 pt-2">
-            <a class="mr-4" href="#websites">Websites</a>
-            <a class="mr-4" href="#web-apps">Web Apps</a>
-            <a class="mr-4" href="#chrome-extensions">Chrome Extensions</a>
-            <a class="mr-4" href="#art">Art</a>
+        <div style="margin-top: 1rem;">
+            <a style="margin-right: 1.5rem;" href="#websites">Websites</a>
+            <a style="margin-right: 1.5rem;" href="#web-apps">Web Apps</a>
+            <a style="margin-right: 1.5rem;" href="#chrome-extensions">Chrome Extensions</a>
+            <a style="margin-right: 1.5rem;" href="#art">Art</a>
         </div>
         <br />
 
         <div id="projects-div">
-            <div id="websites" class="row">
-                <div class="col-12">
+            <div id="websites" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
+                <div style="grid-column: 1 / -1;">
                     <h1>
-                        <a class="btn btn-dark mx-2 link-btn" href="#websites">
+                        <a class="btn btn-dark link-btn" style="margin: 0 0.5rem;" href="#websites">
                             <i class="fas fa-link"></i>
                         </a>
                         Websites
                     </h1>
                 </div>
             </div>
-            <div id="web-apps" class="row">
-                <div class="col-12">
+            <div id="web-apps"style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
+                <div style="grid-column: 1 / -1;">
                     <h1>
-                        <a class="btn btn-dark mx-2 link-btn" href="#web-apps">
+                        <a class="btn btn-dark link-btn" style="margin: 0 0.5rem;" href="#web-apps">
                             <i class="fas fa-link"></i>
                         </a>
                         Web Apps
                     </h1>
                 </div>
             </div>
-            <div id="chrome-extensions" class="row">
-                <div class="col-12">
+            <div id="chrome-extensions"style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
+                <div style="grid-column: 1 / -1;">
                     <h1>
-                        <a class="btn btn-dark mx-2 link-btn" href="#chrome-extensions">
+                        <a class="btn btn-dark link-btn" style="margin: 0 0.5rem;" href="#chrome-extensions">
                             <i class="fas fa-link"></i>
                         </a>
                         Chrome Extensions
                     </h1>
                 </div>
             </div>
-            <div id="art" class="row">
-                <div class="col-12">
+            <div id="art" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
+                <div style="grid-column: 1 / -1;">
                     <h1>
-                        <a class="btn btn-dark mx-2 link-btn" href="#art">
+                        <a class="btn btn-dark link-btn" style="margin: 0 0.5rem;" href="#art">
                             <i class="fas fa-link"></i>
                         </a>
                         Art

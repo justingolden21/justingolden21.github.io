@@ -340,7 +340,7 @@ $(() => {
 	for (let project of PROJECTS) {
 		const id = project.name.toLowerCase().replace(/ /g, '-');
 		let tmpHTML = `
-		<div class="project-div col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal-${id}">
+		<div class="project-div" data-toggle="modal" data-target="#modal-${id}">
 			<div class="project-div-inner">
 				<div class="project-div-front">
 					<img class="project-icon" src="${project.icon}">
@@ -382,7 +382,7 @@ $(() => {
 							<img class="project-icon" src="${project.icon}">
 							${project.name}
 						</h4>
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" class="close" data-target="#modal-${id}">&times;</button>
 					</div>
 					<div class="modal-body">
                         ${project.type != 'art' ? `<h3>Overview</h3>` : ''}
@@ -458,13 +458,53 @@ $(() => {
 			tmpHTML
 		);
 
-		console.log(project.type);
-		if (project.imgs) {
-			console.log(project.imgs);
-			console.log(project.imgs.each);
-			console.log(project.imgs.forEach);
-			console.log(project.imgs.map);
-			console.log(project.imgs.map((src) => `${src} hi`).join(''));
+		// console.log(project.type);
+		// if (project.imgs) {
+		// 	console.log(project.imgs);
+		// 	console.log(project.imgs.each);
+		// 	console.log(project.imgs.forEach);
+		// 	console.log(project.imgs.map);
+		// 	console.log(project.imgs.map((src) => `${src} hi`).join(''));
+		// }
+
+		// modal js
+		// Function to show modal
+		function showModal(modalId) {
+			var modal = document.querySelector(modalId);
+			if (modal) {
+				modal.style.display = 'block';
+			}
 		}
+
+		// Function to hide modal
+		function hideModal(modalId) {
+			var modal = document.querySelector(modalId);
+			if (modal) {
+				modal.style.display = 'none';
+			}
+		}
+
+		// Add event listeners to buttons
+		document.querySelectorAll('[data-target^="#modal-"]').forEach(function (button) {
+			button.addEventListener('click', function () {
+				var target = this.getAttribute('data-target');
+				showModal(target);
+			});
+		});
+
+		// Add event listeners to close buttons
+		document.querySelectorAll('.close[data-target^="#modal-"]').forEach(function (closeButton) {
+			closeButton.addEventListener('click', function () {
+				var target = this.getAttribute('data-target');
+				hideModal(target);
+			});
+		});
+
+		// Close modal when clicking outside of it
+		window.addEventListener('click', function (event) {
+			if (event.target.classList.contains('modal')) {
+				event.target.style.display = 'none';
+			}
+		});
 	}
 });
