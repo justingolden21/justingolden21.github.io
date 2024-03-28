@@ -1,12 +1,17 @@
-$(() => {
+document.addEventListener('DOMContentLoaded', function () {
 	// ==== Sidebar ====
 
-	$('#menu-btn').click(toggleNav);
-	$('#sidebar a').attr('tabindex', '-1');
+	document.getElementById('menu-btn').addEventListener('click', toggleNav);
+	const sidebarLinks = document.querySelectorAll('#sidebar a');
+	sidebarLinks.forEach(function (link) {
+		link.setAttribute('tabindex', '-1');
+	});
 
 	// esc to close sidebar
 	document.body.addEventListener('keydown', function (e) {
-		if (e.key == 'Escape' && navIsOpen) $('#menu-btn').click();
+		if (e.key === 'Escape' && navIsOpen) {
+			toggleNav();
+		}
 	});
 });
 
@@ -16,29 +21,46 @@ let navIsOpen = false;
 
 function toggleNav() {
 	navIsOpen = !navIsOpen;
-	if (navIsOpen) openNav();
-	else closeNav();
+	if (navIsOpen) {
+		openNav();
+	} else {
+		closeNav();
+	}
 
-	$('#menu-btn').toggleClass('is-active');
+	const menuBtn = document.getElementById('menu-btn');
+	menuBtn.classList.toggle('is-active');
 }
 
 function openNav() {
-	$('#sidebar').css('width', '16rem');
-	$('#sidebar').css('border-right', '0.25rem solid #333');
-	$('#sidebar a').css('display', 'none');
-	$('#sidebar a').attr('tabindex', '');
-	let mils = parseFloat($('#sidebar').css('transition-duration')) * 1000;
+	const sidebar = document.getElementById('sidebar');
+	sidebar.style.width = '16rem';
+	sidebar.style.borderRight = '0.25rem solid #333';
+
+	const sidebarLinks = document.querySelectorAll('#sidebar a');
+	sidebarLinks.forEach(function (link) {
+		link.style.display = 'none';
+		link.removeAttribute('tabindex');
+	});
+
+	const transitionDuration =
+		parseFloat(window.getComputedStyle(sidebar).getPropertyValue('transition-duration')) * 1000;
 	setTimeout(function () {
-		$('#sidebar a').css('display', '');
-	}, mils);
+		sidebarLinks.forEach(function (link) {
+			link.style.display = '';
+		});
+	}, transitionDuration);
 }
 
 function closeNav() {
-	$('#sidebar').css('width', '0px');
-	$('#sidebar').css('border-right', '');
+	const sidebar = document.getElementById('sidebar');
+	sidebar.style.width = '0px';
+	sidebar.style.borderRight = '';
 
-	$('#sidebar a').css('display', 'none');
-	$('#sidebar a').attr('tabindex', '-1');
+	const sidebarLinks = document.querySelectorAll('#sidebar a');
+	sidebarLinks.forEach(function (link) {
+		link.style.display = 'none';
+		link.setAttribute('tabindex', '-1');
+	});
 }
 
 // ==== Utility ====
