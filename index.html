@@ -19,10 +19,10 @@
     <!-- font awesome, bootstrap, jquery, popper -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
     <!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
     <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
@@ -38,7 +38,7 @@
     <div id="top-container">
         <button id="menu-btn" class="hamburger hamburger--squeeze btn" aria-label="Menu">
             <span class="hamburger-box">
-                <span class="hamburger-inner" />
+                <span class="hamburger-inner">
             </span>
         </button>
 
@@ -50,9 +50,9 @@
             <!-- <a href="#">Clients</a> -->
         </nav>
 
-        <div class="row">
-            <div id="tag-col-1" class="col-md-2 tag-col"></div>
-            <div id="tag-col-2" class="col-md-2 tag-col"></div>
+        <div style="display: flex; gap: 1rem;">
+            <div id="tag-col-1" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
+            <div id="tag-col-2" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
             <div class="col-md-4">
                 <!-- <img id="profile-img" src="img/profile/1.png" draggable="false"> -->
                 <!-- <img id="profile-img" src="img/profile.svg" draggable="false"> -->
@@ -374,8 +374,8 @@
                     </g>
                 </svg>
             </div>
-            <div id="tag-col-3" class="col-md-2 tag-col"></div>
-            <div id="tag-col-4" class="col-md-2 tag-col"></div>
+            <div id="tag-col-3" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
+            <div id="tag-col-4" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
         </div>
 
         <hr />
@@ -387,24 +387,21 @@
         </div>
 
         <!-- Programmer. &nbsp; Writer. &nbsp; Graphic Designer. -->
-        <h5 id="subtitle" class="my-3 font-weight-light"></h5>
+        <h5 id="subtitle" style="font-weight: 300; font-size: 1.25rem; margin: 1rem 0;"></h5>
         <div id="top-btns">
-            <button id="mail-btn" class="btn btn-dark mx-2" title="Email me at justingolden@rgbstudios.org"
-                data-toggle="tooltip" data-placement="bottom">
+            <button id="mail-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="Email me at justingolden@rgbstudios.org">
                 <i id="envelope-icon" class="fas fa-envelope"></i>
             </button>
-            <button id="linkedin-btn" class="btn btn-dark mx-2" title="View my LinkedIn" data-toggle="tooltip"
-                data-placement="bottom">
+            <button id="linkedin-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="View my LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </button>
-            <button id="github-btn" class="btn btn-dark mx-2" title="View my GitHub" data-toggle="tooltip"
-                data-placement="bottom">
+            <button id="github-btn" class="btn btn-dark" style="margin: 0 0.5rem;" title="View my GitHub">
                 <i class="fab fa-github"></i>
             </button>
 
             <br />
 
-            <button onclick="window.open('projects.html','_self')" class="btn btn-dark my-3 px-4"
+            <button onclick="window.open('projects.html','_self')" class="btn btn-dark" style="margin: 1rem 0;"
                 style="letter-spacing: 0.1rem">
                 View Projects
             </button>
@@ -412,9 +409,9 @@
 
         <hr />
 
-        <div class="text-left fade-in-text">
-            <h3>About</h3>
-            <p class="my-3">
+        <div class="fade-in-text" style="text-align: left;">
+            <h3 style="font-size: 1.75rem;">About</h3>
+            <p style="margin: 1rem 0;">
                 I am a full stack web and mobile developer located in San
                 Diego, CA. I graduated from San Diego State University with
                 a major in computer science and a minor in creative writing.
@@ -425,8 +422,8 @@
                 <a href="projects.html">projects</a>. You can contact me
                 using the buttons above.
             </p>
-            <h3>Interests</h3>
-            <p class="my-3">
+            <h3 style="font-size: 1.75rem;">Interests</h3>
+            <p style="margin: 1rem 0;">
                 I like to write, edit videos, and design logos, brand
                 identity systems, and application mockups. I enjoy all
                 things board game and card game, and also play a few video

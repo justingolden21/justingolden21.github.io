@@ -6,7 +6,7 @@ $(() => {
 		window.open('https://www.linkedin.com/in/justingolden21/', '_blank')
 	);
 	$('#github-btn').click(() => window.open('https://github.com/justingolden21/', '_blank'));
-	$('[data-toggle="tooltip"]').tooltip();
+	// $('[data-toggle="tooltip"]').tooltip();
 
 	// ==== Animated Envelope Icon ====
 

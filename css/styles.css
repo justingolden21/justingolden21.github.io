@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Raleway&family=Merriweather&display=swap');
 
+/* Reset CSS */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* Typography */
 
 * {
@@ -51,10 +77,20 @@ p {
 /* Buttons */
 
 .btn {
+	border: 0;
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+	user-select: none;
+	font-size: 1rem;
+	cursor: pointer;
+
 	border-radius: 0;
-	padding: 0.5rem 1rem;
+	padding: 0.75rem 1.25rem;
 }
 .btn-dark {
+	color: #fff;
 	background-color: #333;
 }
 .btn-dark:hover {
