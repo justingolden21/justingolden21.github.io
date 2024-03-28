@@ -74,6 +74,11 @@ p {
 	line-height: 1.5rem;
 }
 
+hr {
+	margin: 1rem 0;
+	border: 1px solid #eee;
+}
+
 /* Buttons */
 
 .btn {
