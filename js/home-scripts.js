@@ -1,4 +1,4 @@
-$(() => {
+document.addEventListener('DOMContentLoaded', function () {
 	// ==== Random Background Color ====
 
 	const color = '#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)];
