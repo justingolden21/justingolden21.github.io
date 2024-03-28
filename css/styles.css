@@ -159,11 +159,27 @@ body.modal-open {
 
 
 
-#name-heading, #nametag {
+#name-heading, #nametag, .tag-col, .fade-in-text, #menu-btn, hr {
 	opacity: 0;
 	animation: fadeIn linear 2s;
-	animation-delay: 1s;
 	animation-fill-mode: forwards;
+}
+
+#name-heading, #nametag  {
+	animation-delay: 1s;
+
+}
+.tag-col {
+	animation-delay: 2s;
+}
+.fade-in-text {
+	animation-delay: 3s;
+}
+#menu-btn {
+	animation-delay: 1.5s;
+}
+hr {
+	animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {

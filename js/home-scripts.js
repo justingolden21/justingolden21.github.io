@@ -47,11 +47,11 @@ $(() => {
 
 	// other page load animations
 
-	$('.tag-col').css('opacity', 0).delay(2000).animate({ opacity: 1 }, 3000);
-	$('.fade-in-text').hide().delay(3000).fadeIn(1000);
+	// $('.tag-col').css('opacity', 0).delay(2000).animate({ opacity: 1 }, 3000);
+	// $('.fade-in-text').hide().delay(3000).fadeIn(1000);
 	$('#top-btns').hide().delay(2500).slideDown(1000);
-	$('#menu-btn').hide().delay(1500).fadeIn(500);
-	$('hr').hide().delay(500).fadeIn(1000);
+	// $('#menu-btn').hide().delay(1500).fadeIn(500);
+	// $('hr').hide().delay(500).fadeIn(1000);
 
 	// typewriter
 
