@@ -334,9 +334,7 @@ const PROJECTS = [
 	// },
 ];
 
-$(() => {
-	$('#profile-img').click(() => window.open('index.html', '_self'));
-
+document.addEventListener('DOMContentLoaded', function () {
 	for (let project of PROJECTS) {
 		const id = project.name.toLowerCase().replace(/ /g, '-');
 		let tmpHTML = `
@@ -454,9 +452,9 @@ $(() => {
 				</div>
 			</div>
 		</div>`;
-		$('#' + (project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type)).append(
-			tmpHTML
-		);
+		document.getElementById(
+			project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type
+		).innerHTML += tmpHTML;
 
 		// console.log(project.type);
 		// if (project.imgs) {
