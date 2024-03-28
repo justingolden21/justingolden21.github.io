@@ -1,22 +1,4 @@
 $(() => {
-	// ==== Link Buttons ====
-
-	$('#mail-btn').click(() => window.open('mailto:justingolden@rgbstudios.org', '_blank'));
-	$('#linkedin-btn').click(() =>
-		window.open('https://www.linkedin.com/in/justingolden21/', '_blank')
-	);
-	$('#github-btn').click(() => window.open('https://github.com/justingolden21/', '_blank'));
-	// $('[data-toggle="tooltip"]').tooltip();
-
-	// ==== Animated Envelope Icon ====
-
-	$('#mail-btn').mouseover(() =>
-		$('#envelope-icon').removeClass('fa-envelope').addClass('fa-envelope-open')
-	);
-	$('#mail-btn').mouseout(() =>
-		$('#envelope-icon').removeClass('fa-envelope-open').addClass('fa-envelope')
-	);
-
 	// ==== Sidebar ====
 
 	$('#menu-btn').click(toggleNav);
