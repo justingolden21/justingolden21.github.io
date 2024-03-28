@@ -157,6 +157,24 @@ body.modal-open {
 		opacity: 1;
 	}
 
+
+
+#name-heading, #nametag {
+	opacity: 0;
+	animation: fadeIn linear 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Colors */
 
 :root {

@@ -37,16 +37,13 @@ $(() => {
 
 	// ==== Page Load Animations ====
 
-	// nametag randomly appears. yes... seriously
+	// nametag randomly appears
 	if (true && Math.random() > 0.95) {
-		$('#nametag-css').attr('href', 'css/nametag.css');
-
-		$('#nametag').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
+		document.getElementById('nametag-css').setAttribute('href', 'css/nametag.css');
 	} else {
-		$('.nametag-text').css('display', 'none');
-
-		$('#name-heading').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
+		document.querySelector('.nametag-text').style.display = 'none';
 	}
+
 
 	// other page load animations
 
