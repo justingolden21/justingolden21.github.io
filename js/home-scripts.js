@@ -2,8 +2,10 @@ $(() => {
 	// ==== Random Background Color ====
 
 	const color = '#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)];
-	$('.st0').css('fill', color);
-	$('.st0').hide().delay(1000).fadeIn(3000);
+	document.querySelector('.st0').style.fill = color;
+	setTimeout(() => {
+		document.querySelector('.st0').classList.add('show');
+	}, 1000);
 
 	// ==== Make and Rotate Tags ====
 

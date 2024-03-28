@@ -148,6 +148,15 @@ body.modal-open {
   }
   
 
+/* fade in svg circle bg */
+	.st0 {
+		opacity: 0;
+		transition: opacity 1s ease;
+	}
+	.st0.show {
+		opacity: 1;
+	}
+
 /* Colors */
 
 :root {
