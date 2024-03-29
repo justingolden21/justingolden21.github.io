@@ -336,6 +336,11 @@ hr {
 	color: #999;
 }
 
+.icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
 /* Animated Profile Pic */
 
 #profile-img path {
