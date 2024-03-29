@@ -189,8 +189,9 @@ hr {
 /* More Basics */
 
 body {
-	margin: 2rem;
-	margin-top: 6rem;
+	max-width: 1280px;
+	margin: auto;
+	padding: 6rem 2rem 2rem;
 }
 
 p {
