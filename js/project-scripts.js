@@ -387,8 +387,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		${
 			!project.screenshotIsLong
 				? `
-						<div class="row">
-							<div class="col-lg-7 col-md-6">
+						<div style="display: flex; gap: 1rem;">
+							<div>
                                 ${
 																	project.type != 'art'
 																		? `<img class="project-screenshot" src="${project.screenshot}">`
@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
 																				.join('')
 																}
 							</div>
-							<div class="col-lg-5 col-md-6">
+							<div>
 								
                             
                             ${
