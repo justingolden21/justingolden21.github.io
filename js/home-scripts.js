@@ -1,9 +1,11 @@
-$(() => {
+document.addEventListener('DOMContentLoaded', function () {
 	// ==== Random Background Color ====
 
 	const color = '#fed600 #91d8f7 #485e88 #faa74a'.split(' ')[random(0, 3)];
-	$('.st0').css('fill', color);
-	$('.st0').hide().delay(1000).fadeIn(3000);
+	document.querySelector('.st0').style.fill = color;
+	setTimeout(() => {
+		document.querySelector('.st0').classList.add('show');
+	}, 1000);
 
 	// ==== Make and Rotate Tags ====
 
@@ -25,35 +27,22 @@ $(() => {
 
 	for (let i = 0; i < TAGS.length; i++) {
 		// %23 is "#"
-		$('#tag-col-' + tagCols[i]).append(
-			`<p style="transform:rotate(${random(-5, 5)}deg);">
-				<a rel="noopener" href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
-				TAGS[i]
-			}</a>
-			</p>`
-		);
+		document.getElementById(
+			'tag-col-' + tagCols[i]
+		).innerHTML += `<p style="margin-bottom: 1rem; transform:rotate(${random(-5, 5)}deg);">
+				<a class="a" rel="noopener" href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
+			TAGS[i]
+		}</a></p>`;
 	}
 
 	// ==== Page Load Animations ====
 
-	// nametag randomly appears. yes... seriously
+	// nametag randomly appears
 	if (true && Math.random() > 0.95) {
-		$('#nametag-css').attr('href', 'css/nametag.css');
-
-		$('#nametag').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
+		document.getElementById('nametag-css').setAttribute('href', 'css/nametag.css');
 	} else {
-		$('.nametag-text').css('display', 'none');
-
-		$('#name-heading').css('opacity', 0).hide().slideDown(1000).animate({ opacity: 1 }, 2000);
+		document.querySelector('.nametag-text').style.display = 'none';
 	}
-
-	// other page load animations
-
-	$('.tag-col').css('opacity', 0).delay(2000).animate({ opacity: 1 }, 3000);
-	$('.fade-in-text').hide().delay(3000).fadeIn(1000);
-	$('#top-btns').hide().delay(2500).slideDown(1000);
-	$('#menu-btn').hide().delay(1500).fadeIn(500);
-	$('hr').hide().delay(500).fadeIn(1000);
 
 	// typewriter
 

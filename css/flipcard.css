@@ -9,7 +9,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	transition: transform 0.8s;
+	transition: transform 0.75s;
 	transform-style: preserve-3d;
 }
 .project-div:hover .project-div-inner {
@@ -40,7 +40,7 @@
 }
 .project-div-back .project-icon {
 	background-color: #fff;
-	border-radius: 12px;
+	border-radius: 1rem;
 }
 
 @media screen and (max-width: 768px) {

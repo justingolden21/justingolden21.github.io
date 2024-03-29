@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Raleway&family=Merriweather&display=swap');
 
+/* Reset CSS */
+
+html {
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* Typography */
 
 * {
@@ -19,13 +57,127 @@ h6 {
 	font-family: 'Merriweather', Roboto, Arial;
 }
 
+.text-lg {
+	font-size: 1.25rem;
+}
+.text-xl {
+	font-size: 1.5rem;
+}
+.text-2xl {
+	font-size: 1.75rem;
+}
+
+/* Modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 40;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 2rem auto;
+	max-width: 1024px;
+}
+
+.modal-content {
+	background-color: #fff;
+}
+
+.modal-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1rem;
+	border-bottom: 2px solid #eee;
+}
+
+.modal-body {
+	padding: 1rem;
+}
+
+/* Animations on page load */
+
+.st0 {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+.st0.show {
+	opacity: 1;
+}
+
+#name-heading,
+#nametag,
+.tag-col,
+.fade-in-text,
+#menu-btn.fade,
+hr {
+	opacity: 0;
+	animation: fadeIn linear 2s;
+	animation-fill-mode: forwards;
+}
+
+#name-heading,
+#nametag {
+	animation-delay: 1s;
+}
+.tag-col {
+	animation-delay: 2s;
+}
+.fade-in-text {
+	animation-delay: 3s;
+}
+#menu-btn.fade {
+	animation-delay: 1.5s;
+}
+hr {
+	animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#top-btns {
+	opacity: 0;
+	animation: slideDown linear 1s;
+	animation-fill-mode: forwards;
+
+	animation-delay: 2.5s;
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		max-height: 0;
+	}
+	to {
+		opacity: 1;
+		max-height: 10rem;
+	}
+}
+
 /* Colors */
 
 :root {
-	--yellow: #fed600;
+	/* --yellow: #fed600; */
 	--lightblue: #91d8f7;
-	--darkblue: #485e88;
-	--orange: #faa74a;
+	/* --darkblue: #485e88; */
+	/* --orange: #faa74a; */
 }
 ::-moz-selection {
 	background: var(--lightblue);
@@ -37,25 +189,33 @@ h6 {
 /* More Basics */
 
 body {
-	margin: 2.5rem;
-	margin-top: 5rem;
-}
-hr {
-	border-width: 2px;
+	max-width: 1280px;
+	margin: auto;
+	padding: 6rem 2rem 2rem;
 }
 
 p {
 	line-height: 1.5rem;
 }
 
+hr {
+	margin: 1rem 0;
+	border: 1px solid #eee;
+}
+
 /* Buttons */
 
 .btn {
-	border-radius: 0;
+	display: inline-block;
+	user-select: none;
+	cursor: pointer;
+	border: 2px solid #333;
 	padding: 0.5rem 1rem;
 }
 .btn-dark {
+	color: #fff;
 	background-color: #333;
+	border-color: #333;
 }
 .btn-dark:hover {
 	background-color: #333;
@@ -71,8 +231,6 @@ p {
 #profile-img {
 	margin: 0.5rem;
 	width: 12rem;
-	border: 2px solid #fff;
-	border-radius: 50%;
 }
 
 #name-heading {
@@ -85,17 +243,17 @@ p {
 
 /* Links */
 
-a {
+.a {
 	font-weight: bold;
 	color: #666;
 	text-decoration: none;
 }
-a:not(.project-desc-link):not(.view-project-in-card) {
+.a:not(.project-desc-link):not(.view-project-in-card) {
 	position: relative;
 }
-a:hover,
-a:focus,
-a:active {
+.a:hover,
+.a:focus,
+.a:active {
 	color: #666;
 	text-decoration: none;
 	outline: none;
@@ -103,10 +261,10 @@ a:active {
 
 /* Underline Effect */
 
-a:not(.project-desc-link):before {
+.a:not(.project-desc-link):before {
 	content: '';
 }
-a:before {
+.a:before {
 	position: absolute;
 	width: 100%;
 	height: 2px;
@@ -115,11 +273,11 @@ a:before {
 	background-color: var(--lightblue);
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	-webkit-transition: -webkit-transform 0.33s ease-in-out 0s;
-	transition: transform 0.33s ease-in-out 0s;
+	-webkit-transition: -webkit-transform 0.25s ease-in-out 0s;
+	transition: transform 0.25s ease-in-out 0s;
 }
-a:hover:before,
-a:focus:before {
+.a:hover:before,
+.a:focus:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
@@ -128,7 +286,7 @@ a:focus:before {
 
 #menu-btn {
 	position: fixed;
-	z-index: 1000;
+	z-index: 20;
 	left: 0;
 	top: 0;
 	border: 4px solid transparent;
@@ -144,11 +302,11 @@ a:focus:before {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 10;
 	background-color: #333;
 	overflow-x: hidden;
-	padding-top: 6rem;
-	transition: 0.2s ease-in-out;
+	padding-top: 4rem;
+	transition: 0.25s ease-in-out;
 	text-align: left;
 }
 #sidebar a {
@@ -158,7 +316,7 @@ a:focus:before {
 	display: block;
 	color: #fff;
 	border: 4px solid transparent;
-	transition: all, 0.2s linear;
+	transition: all, 0.25s linear;
 }
 #sidebar a:hover,
 #sidebar a:focus {
@@ -176,23 +334,14 @@ a:focus:before {
 
 .tag-col a {
 	color: #999;
-	font-weight: lighter;
-	font-style: italic;
 }
 
-/* Tooltips */
-
-.tooltip-inner {
-	background: #333;
-	color: #fff;
-	border-radius: 0;
-}
-.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
-.bs-tooltip-bottom .arrow::before {
-	border-bottom-color: #333;
+.icon {
+	width: 1.5rem;
+	height: 1.5rem;
 }
 
-/* Animated Profile */
+/* Animated Profile Pic */
 
 #profile-img path {
 	stroke-dasharray: 1000;
@@ -213,27 +362,22 @@ a:focus:before {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#tag-wrapper {
+		display: flex;
+		gap: 1rem;
+	}
+}
+
 @media screen and (max-width: 768px) {
-	/* md */
 	body {
 		margin-top: 2.5rem;
 	}
-	.tag-col br {
-		display: none !important;
-	}
-	.tag-col p {
-		transform: rotate(0deg) !important;
-		display: inline;
-		padding-right: 0.25rem;
+	.tag-col {
+		display: none;
 	}
 	#profile-img {
 		margin-top: 1.25rem;
 		margin-bottom: 1.25rem;
-	}
-}
-@media screen and (max-width: 576px) {
-	/* xs */
-	.tag-col p {
-		display: none;
 	}
 }

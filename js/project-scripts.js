@@ -19,7 +19,7 @@ const PROJECTS = [
 			"When Google announced they would be shutting down chrome apps, I didn't want to leave my users hanging. I redesigned Desktop Clock from the ground up as a PWA (installable website) and kept every feature I could while adding many more, and completely overhauled both the tech stack and aesthetic"
 	},
 	{
-		name: 'Desktop Clock',
+		name: 'Desktop Clock Chrome App',
 		type: 'web app',
 		icon: 'img/projects/desktop-clock-icon.svg',
 		color: '#999',
@@ -119,7 +119,7 @@ const PROJECTS = [
 			'Enter the probability, number of trials, and successes, and quickly see binomial and cumulative probabilities, as well as your results visualized on charts in real time. Also, read and learn about all formulas used. It is a great tool for statisticians, students in the classroom, or just to determine, "what are the odds of that?"',
 		tech: 'I designed this website using Bootstrap 3 and Material Icons. I am using the Google Charts API to dynamically generate the pie and bar charts, as well as MathJax to display the formulas.',
 		story:
-			'I was bored in a statistics class when I started doodling the UI for this calculator. I made it the following night and used it for my homework. Since then, I have maintained and improved it, and later made it into my first <a href="https://play.google.com/store/apps/details?id=org.rgbstudios.binomialdistributioncalculator" target="_blank">Android app</a> which now has 5000 downloads.'
+			'I was bored in a statistics class when I started doodling the UI for this calculator. I made it the following night and used it for my homework. Since then, I have maintained and improved it, and later made it into my first <a class="a" href="https://play.google.com/store/apps/details?id=org.rgbstudios.binomialdistributioncalculator" target="_blank">Android app</a> which now has 5000 downloads.'
 	},
 	{
 		name: 'Barcode',
@@ -315,7 +315,7 @@ const PROJECTS = [
 		],
 		desc: 'is a piece of artwork featuring the Gastly evolution line from Pokemon.',
 		descLong:
-			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them. <a href="https://youtu.be/6orY3kfmT8I">Watch me create this art</a>.'
+			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them. <a class="a" href="https://youtu.be/6orY3kfmT8I">Watch me create this art</a>.'
 	}
 	// art has no screenshot, link, features, tech, or story, but has an array of imgs
 
@@ -334,13 +334,11 @@ const PROJECTS = [
 	// },
 ];
 
-$(() => {
-	$('#profile-img').click(() => window.open('index.html', '_self'));
-
+document.addEventListener('DOMContentLoaded', function () {
 	for (let project of PROJECTS) {
 		const id = project.name.toLowerCase().replace(/ /g, '-');
 		let tmpHTML = `
-		<div class="project-div col-lg-3 col-md-4 col-sm-6" data-toggle="modal" data-target="#modal-${id}">
+		<div class="project-div" data-toggle="modal" data-target="#modal-${id}">
 			<div class="project-div-inner">
 				<div class="project-div-front">
 					<img class="project-icon" src="${project.icon}">
@@ -349,122 +347,136 @@ $(() => {
 				<div class="project-div-back" style="background-color:${project.color}">
 					<img class="project-icon" src="${project.icon}">
 					<p class="project-desc">
-                        ${
-													project.type == 'art'
-														? project.name
-														: `<a
-									class="project-desc-link"
+						${
+							project.type == 'art'
+								? project.name
+								: `<a
+									class="a project-desc-link"
 									href="${project.link}"
 									target="_blank"
 									tabindex="-1"
 								>
 									${project.name}
 								</a>`
-												}
+						}
 						${project.desc}
 					</p>
-                    ${
-											project.type == 'art'
-												? ''
-												: `<a class="view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
-                            View this project</a>`
-										}
+					${
+						project.type == 'art'
+							? ''
+							: `<a class="a view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">View this project</a>`
+					}
 				</div>
 			</div>
 		</div>`;
 
 		tmpHTML += `
-		<div class="modal fade" id="modal-${id}">
-			<div class="modal-dialog modal-lg">
+		<div class="modal" id="modal-${id}">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">
+						<h4 class="modal-title text-xl">
 							<img class="project-icon" src="${project.icon}">
 							${project.name}
 						</h4>
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" class="close btn" data-target="#modal-${id}">&times;</button>
 					</div>
-					<div class="modal-body">
-                        ${project.type != 'art' ? `<h3>Overview</h3>` : ''}
-		${
-			!project.screenshotIsLong
-				? `
-						<div class="row">
-							<div class="col-lg-7 col-md-6">
-                                ${
-																	project.type != 'art'
-																		? `<img class="project-screenshot" src="${project.screenshot}">`
-																		: project.imgs
-																				.map(
-																					(src) =>
-																						`<img src="${src}" style="max-width:75%; margin: 1rem;">`
-																				)
-																				.join('')
-																}
+					<div class="modal-body">${project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''}
+						${
+							!project.screenshotIsLong
+								? `
+						<div style="display: flex; gap: 1rem;">
+							<div>
+								${
+									project.type != 'art'
+										? `<img class="project-screenshot" src="${project.screenshot}">`
+										: project.imgs
+												.map((src) => `<img src="${src}" style="max-width:75%; margin: 1rem;">`)
+												.join('')
+								}
 							</div>
-							<div class="col-lg-5 col-md-6">
-								
-                            
-                            ${
-															project.type != 'art'
-																? `<h3>Features</h3>
-                                    <p class="project-details">${project.features}
-                                        <a class="view-project" href="${project.link}" target="_blank">View this project </a>
-                                    </p>`
-																: `<h3>About</h3>
-                                    <p class="project-details">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
-														}
-
+							<div>
+								${
+									project.type != 'art'
+										? `<h3 class="text-xl">Features</h3>
+												<p class="project-details" style="margin-bottom: 1rem;">${project.features}
+													<a class="a view-project" href="${project.link}" target="_blank">View this project </a>
+												</p>`
+										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
+												<p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
+								}
 							</div>
 						</div>
 						<br>`
-				: `
-                    ${
-											project.screenshot
-												? `<img class="project-screenshot" src="${project.screenshot}">
-						<br><br>`
-												: ''
-										}
-
-
-                    ${
-											project.type != 'art'
-												? `<h3>Features</h3>
-                            <p class="project-details">${project.features}
-                                <a class="view-project" href="${project.link}" target="_blank">View this project </a>
-                            </p>`
-												: `<h3>About</h3>
-                            <p class="project-details">${project.desc}</p>`
-										}
-                    `
-		}
-                    ${
-											project.story
-												? `<h3>Story</h3>
-                    <p class="project-features">${project.story}</p>`
-												: ''
-										}
-                    ${
-											project.tech
-												? `<h3>Tech</h3>
-                    <p class="project-tech">${project.tech}</p>`
-												: ''
-										}
+								: `${
+										project.screenshot
+											? `<img class="project-screenshot" src="${project.screenshot}"><br><br>`
+											: ''
+								  }
+								${
+									project.type != 'art'
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
+									<p class="project-details" style="margin-bottom: 1rem;">${project.features}
+										<a class="a view-project" href="${project.link}" target="_blank">View this project </a>
+									</p>`
+										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
+									<p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
+								}`
+						}
+								${
+									project.story
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Story</h3>
+											<p class="project-features" style="margin-bottom: 1rem;">${project.story}</p>`
+										: ''
+								}
+								${
+									project.tech
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Tech</h3>
+											<p class="project-tech" style="margin-bottom: 1rem;">${project.tech}</p>`
+										: ''
+								}
 					</div>
 				</div>
 			</div>
 		</div>`;
-		$('#' + (project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type)).append(
-			tmpHTML
-		);
 
-		console.log(project.type);
-		if (project.imgs) {
-			console.log(project.imgs);
-			console.log(project.imgs.each);
-			console.log(project.imgs.forEach);
-			console.log(project.imgs.map);
-			console.log(project.imgs.map((src) => `${src} hi`).join(''));
+		document.getElementById(
+			project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type
+		).innerHTML += tmpHTML;
+
+		// modal js
+		// Function to show modal
+		function showModal(modalId) {
+			document.querySelector(modalId).style.display = 'block';
+			document.body.style.overflow = 'hidden';
 		}
+
+		// Function to hide modal
+		function hideModal(modalId) {
+			document.querySelector(modalId).style.display = 'none';
+			document.body.style.overflow = '';
+		}
+
+		// Add event listeners to buttons
+		document.querySelectorAll('[data-target^="#modal-"]').forEach(function (button) {
+			button.addEventListener('click', function () {
+				showModal(this.getAttribute('data-target'));
+			});
+		});
+
+		// Add event listeners to close buttons
+		document.querySelectorAll('.close[data-target^="#modal-"]').forEach(function (closeButton) {
+			closeButton.addEventListener('click', function () {
+				hideModal(this.getAttribute('data-target'));
+			});
+		});
+
+		// Close modal when clicking outside of it
+		window.addEventListener('click', function (event) {
+			if (event.target.classList.contains('modal')) {
+				event.target.style.display = 'none';
+				document.body.style.overflow = '';
+			}
+		});
 	}
 });

@@ -16,14 +16,6 @@
     <meta name="msapplication-navbutton-color" content="#333" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#333" />
 
-    <!-- font awesome, bootstrap, jquery, popper -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <!-- https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.min.css -->
     <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
 
@@ -36,23 +28,46 @@
 
 <body>
     <div id="top-container">
-        <button id="menu-btn" class="hamburger hamburger--squeeze btn" aria-label="Menu">
+        <button id="menu-btn" class="fade hamburger hamburger--squeeze btn" aria-label="Menu">
             <span class="hamburger-box">
-                <span class="hamburger-inner" />
-            </span>
+                <span class="hamburger-inner">
+                </span>
         </button>
 
         <nav id="sidebar">
-            <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
-            <!-- https://docs.google.com/document/d/1VVc8aKE7PzgPKuNurS1LN_qIJpVeo88-q3IT4Qr215Y -->
-            <a href="resume.pdf" target="_blank"><i class="fas fa-id-card"></i> R&#233;sum&#233;</a>
-            <a href="projects.html"><i class="fas fa-drafting-compass"></i> Projects</a>
-            <!-- <a href="#">Clients</a> -->
+            <a href="#" class="active">
+                <svg class="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+                    </path>
+                </svg>
+                Home
+            </a>
+            <a href="resume.pdf" target="_blank">
+                <svg class="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path
+                        d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z">
+                    </path>
+                </svg>
+                R&#233;sum&#233;
+            </a>
+            <a href="projects.html">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" class="feather feather-pen-tool">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                    <path d="M2 2l7.586 7.586"></path>
+                    <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+                Projects
+            </a>
         </nav>
 
-        <div class="row">
-            <div id="tag-col-1" class="col-md-2 tag-col"></div>
-            <div id="tag-col-2" class="col-md-2 tag-col"></div>
+        <div id="tag-wrapper">
+            <div id="tag-col-1" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
+            <div id="tag-col-2" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
             <div class="col-md-4">
                 <!-- <img id="profile-img" src="img/profile/1.png" draggable="false"> -->
                 <!-- <img id="profile-img" src="img/profile.svg" draggable="false"> -->
@@ -374,65 +389,80 @@
                     </g>
                 </svg>
             </div>
-            <div id="tag-col-3" class="col-md-2 tag-col"></div>
-            <div id="tag-col-4" class="col-md-2 tag-col"></div>
+            <div id="tag-col-3" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
+            <div id="tag-col-4" class="tag-col" style="flex: 0 0 16.667%; max-width: 16.667%;"></div>
         </div>
 
         <hr />
 
         <div id="nametag">
-            <h3 class="nametag-text">Hello</h3>
-            <h5 class="nametag-text">my name is</h5>
+            <div class="nametag-text">
+                <h3>Hello</h3>
+                <h5>my name is</h5>
+            </div>
             <h1 id="name-heading">Justin Golden</h1>
         </div>
 
         <!-- Programmer. &nbsp; Writer. &nbsp; Graphic Designer. -->
-        <h5 id="subtitle" class="my-3 font-weight-light"></h5>
+        <h5 id="subtitle" style="margin: 1rem 0;" class="text-lg"></h5>
         <div id="top-btns">
-            <button id="mail-btn" class="btn btn-dark mx-2" title="Email me at justingolden@rgbstudios.org"
-                data-toggle="tooltip" data-placement="bottom">
-                <i id="envelope-icon" class="fas fa-envelope"></i>
-            </button>
-            <button id="linkedin-btn" class="btn btn-dark mx-2" title="View my LinkedIn" data-toggle="tooltip"
-                data-placement="bottom">
-                <i class="fab fa-linkedin"></i>
-            </button>
-            <button id="github-btn" class="btn btn-dark mx-2" title="View my GitHub" data-toggle="tooltip"
-                data-placement="bottom">
-                <i class="fab fa-github"></i>
-            </button>
+            <a href="mailto:justingolden@rgbstudios.org" target="_blank" class="btn btn-dark" style="margin: 0 0.5rem;"
+                title="Email me at justingolden@rgbstudios.org">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" class="feather feather-mail">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/justingolden21/" target="_blank" class="btn btn-dark"
+                style="margin: 0 0.5rem;" title="View my LinkedIn">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://github.com/justingolden21/" target="_blank" class="btn btn-dark" style="margin: 0 0.5rem;"
+                title="View my GitHub">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" class="feather feather-github">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+            </a>
 
             <br />
 
-            <button onclick="window.open('projects.html','_self')" class="btn btn-dark my-3 px-4"
-                style="letter-spacing: 0.1rem">
+            <a href="projects.html" class="btn btn-dark" style="margin: 1rem 0; text-decoration: none;">
                 View Projects
-            </button>
+            </a>
         </div>
 
         <hr />
 
-        <div class="text-left fade-in-text">
-            <h3>About</h3>
-            <p class="my-3">
-                I am a full stack web and mobile developer located in San
-                Diego, CA. I graduated from San Diego State University with
-                a major in computer science and a minor in creative writing.
-                I pride myself on designing simple, elegant, and responsive
-                user interfaces. I am passionate about UI, UX, and design. I
-                also love typography and brand identity. Feel free to browse
-                my
-                <a href="projects.html">projects</a>. You can contact me
-                using the buttons above.
-            </p>
-            <h3>Interests</h3>
-            <p class="my-3">
-                I like to write, edit videos, and design logos, brand
-                identity systems, and application mockups. I enjoy all
-                things board game and card game, and also play a few video
-                games. I am also a huge basketball fan.
-            </p>
-        </div>
+    </div>
+    <div class="fade-in-text" style="text-align: left;">
+        <h3 class="text-2xl">About</h3>
+        <p style="margin: 1rem 0;">
+            I am a full stack web and mobile developer located in San
+            Diego, CA. I graduated from San Diego State University with
+            a major in computer science and a minor in creative writing.
+            I pride myself on designing simple, elegant, and responsive
+            user interfaces. I am passionate about UI, UX, and design. I
+            also love typography and brand identity. Feel free to browse
+            my
+            <a href="projects.html" class="a">projects</a>. You can contact me
+            using the buttons above.
+        </p>
+        <h3 class="text-2xl">Interests</h3>
+        <p style="margin: 1rem 0;">
+            I like to write, edit videos, and design logos, brand
+            identity systems, and application mockups. I enjoy all
+            things board game and card game, and also play a few video
+            games. I am also a huge basketball fan.
+        </p>
     </div>
 </body>
 
