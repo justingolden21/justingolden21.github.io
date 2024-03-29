@@ -304,7 +304,7 @@ hr {
 	z-index: 10;
 	background-color: #333;
 	overflow-x: hidden;
-	padding-top: 6rem;
+	padding-top: 4rem;
 	transition: 0.25s ease-in-out;
 	text-align: left;
 }

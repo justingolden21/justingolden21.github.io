@@ -30,8 +30,8 @@
 }
 
 .hamburger-box {
-	width: 40px;
-	height: 40px;
+	width: 24px;
+	height: 24px;
 	display: inline-block;
 	position: relative;
 }
@@ -44,7 +44,7 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-	width: 40px;
+	width: 24px;
 	height: 4px;
 	background-color: #333;
 	border-radius: 4px;
@@ -66,10 +66,10 @@
 	display: block;
 }
 .hamburger-inner::before {
-	top: -12px;
+	top: -8px;
 }
 .hamburger-inner::after {
-	bottom: -12px;
+	bottom: -8px;
 }
 
 /* Squeeze */
