@@ -21,11 +21,9 @@
 }
 .project-screenshot {
 	width: 90%;
-	/*width: 40%;*/
-	/*width: 200px;*/
 	border: 2px solid #eee;
 	box-shadow: 0.5rem 0.5rem 0px var(--lightblue);
-	margin-bottom: 1rem;
+	margin: 1rem auto;
 }
 .project-div:hover .project-details {
 	display: inline;
@@ -102,7 +100,7 @@
 
 #profile-img {
 	cursor: pointer;
-	transition: transform 0.2s linear;
+	transition: transform 0.25s linear;
 }
 #profile-img:hover {
 	transform: scale(1.05);
@@ -118,13 +116,8 @@
 
 @media only screen and (max-width: 768px) {
 	/* md */
-	.project-screenshot {
-		/* centered */
-		margin: 10px auto;
-		display: block;
-	}
 	.project-desc,
 	.project-details {
-		padding: 15px;
+		padding: 1rem;
 	}
 }

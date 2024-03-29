@@ -4,7 +4,7 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 *,
@@ -55,6 +55,16 @@ h4,
 h5,
 h6 {
 	font-family: 'Merriweather', Roboto, Arial;
+}
+
+.text-lg {
+	font-size: 1.25rem;
+}
+.text-xl {
+	font-size: 1.5rem;
+}
+.text-2xl {
+	font-size: 1.75rem;
 }
 
 /* Modal */
@@ -157,7 +167,7 @@ hr {
 	}
 	to {
 		opacity: 1;
-		max-height: 200px; /* Adjust the value to accommodate the content height */
+		max-height: 10rem;
 	}
 }
 
@@ -179,8 +189,8 @@ hr {
 /* More Basics */
 
 body {
-	margin: 2.5rem;
-	margin-top: 5rem;
+	margin: 2rem;
+	margin-top: 6rem;
 }
 
 p {
@@ -196,7 +206,6 @@ hr {
 
 .btn {
 	display: inline-block;
-	font-weight: 400;
 	user-select: none;
 	cursor: pointer;
 	border: 2px solid #333;
@@ -263,8 +272,8 @@ hr {
 	background-color: var(--lightblue);
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	-webkit-transition: -webkit-transform 0.33s ease-in-out 0s;
-	transition: transform 0.33s ease-in-out 0s;
+	-webkit-transition: -webkit-transform 0.25s ease-in-out 0s;
+	transition: transform 0.25s ease-in-out 0s;
 }
 .a:hover:before,
 .a:focus:before {
@@ -296,7 +305,7 @@ hr {
 	background-color: #333;
 	overflow-x: hidden;
 	padding-top: 6rem;
-	transition: 0.2s ease-in-out;
+	transition: 0.25s ease-in-out;
 	text-align: left;
 }
 #sidebar a {
@@ -306,7 +315,7 @@ hr {
 	display: block;
 	color: #fff;
 	border: 4px solid transparent;
-	transition: all, 0.2s linear;
+	transition: all, 0.25s linear;
 }
 #sidebar a:hover,
 #sidebar a:focus {
@@ -324,8 +333,6 @@ hr {
 
 .tag-col a {
 	color: #999;
-	font-weight: lighter;
-	font-style: italic;
 }
 
 /* Animated Profile Pic */
