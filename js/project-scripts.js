@@ -383,7 +383,9 @@ document.addEventListener('DOMContentLoaded', function () {
 						<button type="button" class="close btn" data-target="#modal-${id}">&times;</button>
 					</div>
 					<div class="modal-body">
-                        ${project.type != 'art' ? `<h3 style="font-size: 1.5rem">Overview</h3>` : ''}
+                        ${
+													project.type != 'art' ? `<h3 style="font-size: 1.5rem">Overview</h3>` : ''
+												}
 		${
 			!project.screenshotIsLong
 				? `
@@ -456,45 +458,30 @@ document.addEventListener('DOMContentLoaded', function () {
 			project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type
 		).innerHTML += tmpHTML;
 
-		// console.log(project.type);
-		// if (project.imgs) {
-		// 	console.log(project.imgs);
-		// 	console.log(project.imgs.each);
-		// 	console.log(project.imgs.forEach);
-		// 	console.log(project.imgs.map);
-		// 	console.log(project.imgs.map((src) => `${src} hi`).join(''));
-		// }
-
 		// modal js
 		// Function to show modal
 		function showModal(modalId) {
-			var modal = document.querySelector(modalId);
-			if (modal) {
-				modal.style.display = 'block';
-			}
+			document.querySelector(modalId).style.display = 'block';
+			document.body.style.overflow = 'hidden';
 		}
 
 		// Function to hide modal
 		function hideModal(modalId) {
-			var modal = document.querySelector(modalId);
-			if (modal) {
-				modal.style.display = 'none';
-			}
+			document.querySelector(modalId).style.display = 'none';
+			document.body.style.overflow = '';
 		}
 
 		// Add event listeners to buttons
 		document.querySelectorAll('[data-target^="#modal-"]').forEach(function (button) {
 			button.addEventListener('click', function () {
-				var target = this.getAttribute('data-target');
-				showModal(target);
+				showModal(this.getAttribute('data-target'));
 			});
 		});
 
 		// Add event listeners to close buttons
 		document.querySelectorAll('.close[data-target^="#modal-"]').forEach(function (closeButton) {
 			closeButton.addEventListener('click', function () {
-				var target = this.getAttribute('data-target');
-				hideModal(target);
+				hideModal(this.getAttribute('data-target'));
 			});
 		});
 
@@ -502,6 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		window.addEventListener('click', function (event) {
 			if (event.target.classList.contains('modal')) {
 				event.target.style.display = 'none';
+				document.body.style.overflow = '';
 			}
 		});
 	}
