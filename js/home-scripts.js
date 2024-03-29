@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.getElementById(
 			'tag-col-' + tagCols[i]
 		).innerHTML += `<p style="margin-bottom: 1rem; transform:rotate(${random(-5, 5)}deg);">
-				<a rel="noopener" href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
+				<a class="a" rel="noopener" href="https://www.google.com/search?q=%23${TAGS[i]}" target="_blank">#${
 			TAGS[i]
 		}</a></p>`;
 	}

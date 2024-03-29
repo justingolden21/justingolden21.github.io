@@ -50,6 +50,7 @@
 	padding: 1.5rem;
 }
 .close {
+	background-color: #fff;
 	font-size: 200%;
 }
 .close:hover {

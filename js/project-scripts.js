@@ -119,7 +119,7 @@ const PROJECTS = [
 			'Enter the probability, number of trials, and successes, and quickly see binomial and cumulative probabilities, as well as your results visualized on charts in real time. Also, read and learn about all formulas used. It is a great tool for statisticians, students in the classroom, or just to determine, "what are the odds of that?"',
 		tech: 'I designed this website using Bootstrap 3 and Material Icons. I am using the Google Charts API to dynamically generate the pie and bar charts, as well as MathJax to display the formulas.',
 		story:
-			'I was bored in a statistics class when I started doodling the UI for this calculator. I made it the following night and used it for my homework. Since then, I have maintained and improved it, and later made it into my first <a href="https://play.google.com/store/apps/details?id=org.rgbstudios.binomialdistributioncalculator" target="_blank">Android app</a> which now has 5000 downloads.'
+			'I was bored in a statistics class when I started doodling the UI for this calculator. I made it the following night and used it for my homework. Since then, I have maintained and improved it, and later made it into my first <a class="a" href="https://play.google.com/store/apps/details?id=org.rgbstudios.binomialdistributioncalculator" target="_blank">Android app</a> which now has 5000 downloads.'
 	},
 	{
 		name: 'Barcode',
@@ -315,7 +315,7 @@ const PROJECTS = [
 		],
 		desc: 'is a piece of artwork featuring the Gastly evolution line from Pokemon.',
 		descLong:
-			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them. <a href="https://youtu.be/6orY3kfmT8I">Watch me create this art</a>.'
+			'is a piece of artwork featuring the Gastly evolution line from Pokemon (Gastly, Haunter, and Gengar). Their smiles are hiding below them. <a class="a" href="https://youtu.be/6orY3kfmT8I">Watch me create this art</a>.'
 	}
 	// art has no screenshot, link, features, tech, or story, but has an array of imgs
 
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
 													project.type == 'art'
 														? project.name
 														: `<a
-									class="project-desc-link"
+									class="a project-desc-link"
 									href="${project.link}"
 									target="_blank"
 									tabindex="-1"
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${
 											project.type == 'art'
 												? ''
-												: `<a class="view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
+												: `<a class="a view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
                             View this project</a>`
 										}
 				</div>
@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
 															project.type != 'art'
 																? `<h3 style="font-size: 1.75rem">Features</h3>
                                     <p class="project-details" style="margin-bottom: 1rem;">${project.features}
-                                        <a class="view-project" href="${project.link}" target="_blank">View this project </a>
+                                        <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
                                     </p>`
 																: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
                                     <p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
 											project.type != 'art'
 												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Features</h3>
                             <p class="project-details" style="margin-bottom: 1rem;">${project.features}
-                                <a class="view-project" href="${project.link}" target="_blank">View this project </a>
+                                <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
                             </p>`
 												: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
                             <p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
