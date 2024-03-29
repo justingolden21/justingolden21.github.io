@@ -66,7 +66,6 @@ const PROJECTS = [
 		icon: 'img/projects/color-convert-icon.svg',
 		color: '#933',
 		screenshot: 'img/projects/color-convert-screenshot-2.png',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/color-convert',
 		desc: 'is a website where users can quickly pick, convert, and share colors.',
 		features:
@@ -81,7 +80,6 @@ const PROJECTS = [
 		icon: 'img/projects/dnd-dice-icon.svg',
 		color: '#339',
 		screenshot: 'img/projects/dnd-dice-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/dnd-dice',
 		desc: 'is a website where users can quickly roll various polyhedral dice for DnD.',
 		features:
@@ -97,7 +95,6 @@ const PROJECTS = [
 		icon: 'img/projects/grade-calc-icon.svg',
 		color: '#393',
 		screenshot: 'img/projects/grade-calc-screenshot.jpg',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/grade-calc',
 		desc: 'is a grading website for professors, designed around speed and ease of use.',
 		features:
@@ -112,7 +109,6 @@ const PROJECTS = [
 		icon: 'img/projects/binomial-calc-icon.svg',
 		color: '#66c',
 		screenshot: 'img/projects/binomial-calc-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/binomial-calc',
 		desc: 'is a binomial distribution calculator website.',
 		features:
@@ -127,7 +123,6 @@ const PROJECTS = [
 		icon: 'img/projects/barcode-icon.svg',
 		color: '#333',
 		screenshot: 'img/projects/barcode-screenshot.jpg',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/barcode',
 		desc: 'is a website where users can type to generate and download barcodes.',
 		features:
@@ -142,7 +137,6 @@ const PROJECTS = [
 		icon: 'img/projects/simple-shot-icon.svg',
 		color: '#666',
 		screenshot: 'img/projects/simple-shot-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://chrome.google.com/webstore/detail/hpnikgbjfhnpcaoicgbkkialbejlecke',
 		desc: 'is a fast, lightweight, and simple screenshot extension for Google Chrome.',
 		features:
@@ -157,7 +151,6 @@ const PROJECTS = [
 		icon: 'img/projects/copylink-icon.svg',
 		color: '#f93',
 		screenshot: 'img/projects/copylink-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://chrome.google.com/webstore/detail/hmbglhnodfegeiemefjoejkkmncdobde',
 		desc: 'is a Chrome extension that lets you copy the link to your tab with the click of a button',
 		features:
@@ -172,7 +165,6 @@ const PROJECTS = [
 		icon: 'img/projects/base-converter-icon.svg',
 		color: '#339',
 		screenshot: 'img/projects/base-converter-screenshot.jpg',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/base-convert/',
 		desc: 'is a tool for quickly converting numbers between binary, octal, decimal, and hex.',
 		features:
@@ -187,7 +179,6 @@ const PROJECTS = [
 		icon: 'img/projects/doodle-pad-icon.svg',
 		color: '#393',
 		screenshot: 'img/projects/doodle-pad-screenshot.jpg',
-		screenshotIsLong: true,
 		link: 'https://rgbstudios.org/doodle-pad/',
 		desc: 'is a simple and light-weight website where you can doodle in your browser.',
 		features:
@@ -202,7 +193,6 @@ const PROJECTS = [
 		icon: 'img/projects/chess-icon.svg',
 		color: '#1E293B',
 		screenshot: 'img/projects/chess-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/chess/',
 		desc: 'is a website for playing chess designed for on-the-go mobile play on one device.',
 		features:
@@ -217,7 +207,6 @@ const PROJECTS = [
 		icon: 'img/projects/hollow-knight-icon.svg',
 		color: '#993D62',
 		screenshot: 'img/projects/hollow-knight-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/hollowknight/',
 		desc: 'is a quick reference guide for charms in the game Hollow Knight.',
 		features:
@@ -232,7 +221,6 @@ const PROJECTS = [
 		icon: 'img/projects/pokedex-icon.svg',
 		color: '#933',
 		screenshot: 'img/projects/pokedex-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/pokedex',
 		desc: 'is a clean, simple, and powerful pokedex. ',
 		features:
@@ -247,7 +235,6 @@ const PROJECTS = [
 		icon: 'img/projects/keycode-icon.svg',
 		color: '#333',
 		screenshot: 'img/projects/keycode-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/keycode/',
 		desc: 'is a simple keycode finder. Just press a key to find its number and name (e.which and e.code)',
 		features:
@@ -262,7 +249,6 @@ const PROJECTS = [
 		icon: 'img/projects/status-codes-icon.svg',
 		color: '#333',
 		screenshot: 'img/projects/status-codes-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/status-codes/',
 		desc: 'is a simple quick reference for HTTP response status codes. Just type a code to find it.',
 		features:
@@ -277,7 +263,6 @@ const PROJECTS = [
 		icon: 'img/projects/random-chess-icon.svg',
 		color: '#B58863',
 		screenshot: 'img/projects/random-chess-screenshot.png',
-		screenshotIsLong: true,
 		link: 'https://justingolden.me/randomchess/',
 		desc: 'is a website to watch random games of chess.',
 		features:
@@ -292,7 +277,6 @@ const PROJECTS = [
 		icon: 'img/projects/tailwind-colors-icon.svg',
 		color: '#6366F1',
 		screenshot: 'img/projects/tailwind-colors-screenshot.png',
-		screenshotIsLong: false,
 		link: 'https://justingolden.me/tailwind-colors/',
 		desc: 'is a quick reference to view, copy, and print TailwindCSS colors.',
 		features:
@@ -325,7 +309,6 @@ const PROJECTS = [
 	// 	'icon': 'img/projects/barcode-icon.svg',
 	// 	'color': '#333',
 	// 	'screenshot': 'img/projects/barcode-screenshot.png',
-	// 	'screenshotIsLong': true,
 	// 	'link': '',
 	// 	'desc': 'is a ',
 	// 	'features': '',
