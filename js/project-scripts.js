@@ -383,9 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						<button type="button" class="close btn" data-target="#modal-${id}">&times;</button>
 					</div>
 					<div class="modal-body">
-                        ${
-													project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''
-												}
+                        ${project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''}
 		${
 			!project.screenshotIsLong
 				? `
