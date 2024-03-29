@@ -372,8 +372,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		</div>`;
 
 		tmpHTML += `
-		<div class="modal fade" id="modal-${id}">
-			<div class="modal-dialog modal-lg">
+		<div class="modal" id="modal-${id}">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h4 class="modal-title" style="font-size: 1.5rem">

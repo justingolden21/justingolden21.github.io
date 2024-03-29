@@ -77,45 +77,20 @@ body.modal-open {
 	height: 100%;
 	overflow: hidden;
 	outline: 0;
-	background-color: rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-backdrop-bg */
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Shell div to position the modal */
 .modal-dialog {
 	position: relative;
 	width: auto;
-	margin: 30px auto; /* Equivalent to Bootstrap's $modal-dialog-margin */
-	pointer-events: none;
-
+	margin: 2rem auto;
 	max-width: 640px;
 }
 
 /* Actual modal content */
 .modal-content {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	color: #000; /* Equivalent to Bootstrap's $modal-content-color */
-	pointer-events: auto;
-	background-color: #fff; /* Equivalent to Bootstrap's $modal-content-bg */
-	border: 1px solid rgba(0, 0, 0, 0.2); /* Equivalent to Bootstrap's $modal-content-border-color */
-	border-radius: 0.3rem; /* Equivalent to Bootstrap's $modal-content-border-radius */
-	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-content-box-shadow-xs */
-	outline: 0;
-}
-
-/* Modal background */
-.modal-backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 30; /* Equivalent to Bootstrap's $zindex-modal-backdrop */
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-backdrop-bg */
-	opacity: 0;
-	transition: opacity 0.15s linear;
+	background-color: #fff;
 }
 
 /* Modal header */
@@ -123,44 +98,17 @@ body.modal-open {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding: 1rem; /* Equivalent to Bootstrap's $modal-header-padding */
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Equivalent to Bootstrap's $modal-header-border-color */
-	border-radius: 0.3rem 0.3rem 0 0; /* Equivalent to Bootstrap's $modal-content-border-radius */
-}
-
-/* Title text within header */
-.modal-title {
-	margin-bottom: 0;
-	line-height: 1.5; /* Equivalent to Bootstrap's $modal-title-line-height */
+	padding: 1rem;
+	border-bottom: 2px solid #eee;
 }
 
 /* Modal body */
 .modal-body {
-	position: relative;
-	flex: 1 1 auto;
-	padding: 1rem; /* Equivalent to Bootstrap's $modal-inner-padding */
-}
-
-/* Modal footer */
-.modal-footer {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding: 1rem; /* Equivalent to Bootstrap's $modal-inner-padding */
-	border-top: 1px solid rgba(0, 0, 0, 0.2); /* Equivalent to Bootstrap's $modal-footer-border-color */
-	border-radius: 0 0 0.3rem 0.3rem; /* Equivalent to Bootstrap's $modal-content-border-radius */
-}
-
-/* Measure scrollbar width for padding body during modal show/hide */
-.modal-scrollbar-measure {
-	position: absolute;
-	top: -9999px;
-	width: 50px;
-	height: 50px;
-	overflow: scroll;
+	padding: 1rem;
 }
 
 /* fade in svg circle bg */
+
 .st0 {
 	opacity: 0;
 	transition: opacity 1s ease;

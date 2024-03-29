@@ -47,12 +47,7 @@
 
 /* modals */
 .modal-content {
-	border: none;
-	border-radius: 0;
 	padding: 1.5rem;
-}
-.modal-header {
-	border-bottom: 2px solid #eee;
 }
 .close {
 	color: #333;
