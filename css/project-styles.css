@@ -114,10 +114,24 @@
 	border: 2px solid #fff;
 }
 
+#projects-div > div {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 @media only screen and (max-width: 768px) {
 	/* md */
 	.project-desc,
 	.project-details {
 		padding: 1rem;
+	}
+	#projects-div > div {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	#projects-div > div {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
