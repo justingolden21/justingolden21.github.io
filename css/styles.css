@@ -7,17 +7,29 @@ html {
 	font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
@@ -45,18 +57,17 @@ h6 {
 	font-family: 'Merriweather', Roboto, Arial;
 }
 
+/* BS Modal */
 
-  /* BS Modal */
-
-  /* Vanilla CSS Modal */
+/* Vanilla CSS Modal */
 
 /* Body class for killing the scroll */
 body.modal-open {
 	overflow: hidden;
-  }
-  
-  /* Container to scroll within */
-  .modal {
+}
+
+/* Container to scroll within */
+.modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -67,20 +78,20 @@ body.modal-open {
 	overflow: hidden;
 	outline: 0;
 	background-color: rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-backdrop-bg */
-  }
-  
-  /* Shell div to position the modal */
-  .modal-dialog {
+}
+
+/* Shell div to position the modal */
+.modal-dialog {
 	position: relative;
 	width: auto;
 	margin: 30px auto; /* Equivalent to Bootstrap's $modal-dialog-margin */
 	pointer-events: none;
 
 	max-width: 640px;
-  }
-  
-  /* Actual modal content */
-  .modal-content {
+}
+
+/* Actual modal content */
+.modal-content {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -92,10 +103,10 @@ body.modal-open {
 	border-radius: 0.3rem; /* Equivalent to Bootstrap's $modal-content-border-radius */
 	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-content-box-shadow-xs */
 	outline: 0;
-  }
-  
-  /* Modal background */
-  .modal-backdrop {
+}
+
+/* Modal background */
+.modal-backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -105,71 +116,73 @@ body.modal-open {
 	background-color: rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-backdrop-bg */
 	opacity: 0;
 	transition: opacity 0.15s linear;
-  }
-  
-  /* Modal header */
-  .modal-header {
+}
+
+/* Modal header */
+.modal-header {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
 	padding: 1rem; /* Equivalent to Bootstrap's $modal-header-padding */
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Equivalent to Bootstrap's $modal-header-border-color */
 	border-radius: 0.3rem 0.3rem 0 0; /* Equivalent to Bootstrap's $modal-content-border-radius */
-  }
-  
-  /* Title text within header */
-  .modal-title {
+}
+
+/* Title text within header */
+.modal-title {
 	margin-bottom: 0;
 	line-height: 1.5; /* Equivalent to Bootstrap's $modal-title-line-height */
-  }
-  
-  /* Modal body */
-  .modal-body {
+}
+
+/* Modal body */
+.modal-body {
 	position: relative;
 	flex: 1 1 auto;
 	padding: 1rem; /* Equivalent to Bootstrap's $modal-inner-padding */
-  }
-  
-  /* Modal footer */
-  .modal-footer {
+}
+
+/* Modal footer */
+.modal-footer {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	padding: 1rem; /* Equivalent to Bootstrap's $modal-inner-padding */
 	border-top: 1px solid rgba(0, 0, 0, 0.2); /* Equivalent to Bootstrap's $modal-footer-border-color */
 	border-radius: 0 0 0.3rem 0.3rem; /* Equivalent to Bootstrap's $modal-content-border-radius */
-  }
-  
-  /* Measure scrollbar width for padding body during modal show/hide */
-  .modal-scrollbar-measure {
+}
+
+/* Measure scrollbar width for padding body during modal show/hide */
+.modal-scrollbar-measure {
 	position: absolute;
 	top: -9999px;
 	width: 50px;
 	height: 50px;
 	overflow: scroll;
-  }
-  
+}
 
 /* fade in svg circle bg */
-	.st0 {
-		opacity: 0;
-		transition: opacity 1s ease;
-	}
-	.st0.show {
-		opacity: 1;
-	}
+.st0 {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+.st0.show {
+	opacity: 1;
+}
 
-
-
-#name-heading, #nametag, .tag-col, .fade-in-text, #menu-btn, hr {
+#name-heading,
+#nametag,
+.tag-col,
+.fade-in-text,
+#menu-btn,
+hr {
 	opacity: 0;
 	animation: fadeIn linear 2s;
 	animation-fill-mode: forwards;
 }
 
-#name-heading, #nametag  {
+#name-heading,
+#nametag {
 	animation-delay: 1s;
-
 }
 .tag-col {
 	animation-delay: 2s;
@@ -185,12 +198,12 @@ hr {
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 #top-btns {
@@ -199,19 +212,18 @@ hr {
 	animation-fill-mode: forwards;
 
 	animation-delay: 2.5s;
-
 }
 
 @keyframes slideDown {
 	from {
-	  opacity: 0;
-	  max-height: 0;
+		opacity: 0;
+		max-height: 0;
 	}
 	to {
-	  opacity: 1;
-	  max-height: 200px; /* Adjust the value to accommodate the content height */
+		opacity: 1;
+		max-height: 200px; /* Adjust the value to accommodate the content height */
 	}
-  }
+}
 
 /* Colors */
 
@@ -252,9 +264,9 @@ hr {
 .btn {
 	border: 0;
 	display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
 	user-select: none;
 	font-size: 1rem;
 	cursor: pointer;
