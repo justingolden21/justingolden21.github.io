@@ -24,6 +24,10 @@
 	border: 2px solid #eee;
 	box-shadow: 0.5rem 0.5rem 0px var(--lightblue);
 	margin: 1rem auto;
+	max-width: 48rem;
+	max-height: 32rem;
+	object-fit: contain;
+	display: block;
 }
 .project-div:hover .project-details {
 	display: inline;

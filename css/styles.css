@@ -80,6 +80,7 @@ h6 {
 	overflow: hidden;
 	outline: 0;
 	background-color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
 }
 
 .modal-dialog {
