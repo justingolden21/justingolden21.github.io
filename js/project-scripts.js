@@ -376,14 +376,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">
+						<h4 class="modal-title" style="font-size: 1.5rem">
 							<img class="project-icon" src="${project.icon}">
 							${project.name}
 						</h4>
-						<button type="button" class="close" data-target="#modal-${id}">&times;</button>
+						<button type="button" class="close btn" data-target="#modal-${id}">&times;</button>
 					</div>
 					<div class="modal-body">
-                        ${project.type != 'art' ? `<h3>Overview</h3>` : ''}
+                        ${project.type != 'art' ? `<h3 style="font-size: 1.5rem">Overview</h3>` : ''}
 		${
 			!project.screenshotIsLong
 				? `
@@ -405,12 +405,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             
                             ${
 															project.type != 'art'
-																? `<h3>Features</h3>
-                                    <p class="project-details">${project.features}
+																? `<h3 style="font-size: 1.75rem">Features</h3>
+                                    <p class="project-details" style="margin-bottom: 1rem;">${project.features}
                                         <a class="view-project" href="${project.link}" target="_blank">View this project </a>
                                     </p>`
-																: `<h3>About</h3>
-                                    <p class="project-details">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
+																: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
+                                    <p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
 														}
 
 							</div>
@@ -427,25 +427,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     ${
 											project.type != 'art'
-												? `<h3>Features</h3>
-                            <p class="project-details">${project.features}
+												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Features</h3>
+                            <p class="project-details" style="margin-bottom: 1rem;">${project.features}
                                 <a class="view-project" href="${project.link}" target="_blank">View this project </a>
                             </p>`
-												: `<h3>About</h3>
-                            <p class="project-details">${project.desc}</p>`
+												: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
+                            <p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
 										}
                     `
 		}
                     ${
 											project.story
-												? `<h3>Story</h3>
-                    <p class="project-features">${project.story}</p>`
+												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Story</h3>
+                    <p class="project-features" style="margin-bottom: 1rem;">${project.story}</p>`
 												: ''
 										}
                     ${
 											project.tech
-												? `<h3>Tech</h3>
-                    <p class="project-tech">${project.tech}</p>`
+												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Tech</h3>
+                    <p class="project-tech" style="margin-bottom: 1rem;">${project.tech}</p>`
 												: ''
 										}
 					</div>

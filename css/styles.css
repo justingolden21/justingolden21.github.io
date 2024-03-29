@@ -75,6 +75,8 @@ body.modal-open {
 	width: auto;
 	margin: 30px auto; /* Equivalent to Bootstrap's $modal-dialog-margin */
 	pointer-events: none;
+
+	max-width: 640px;
   }
   
   /* Actual modal content */
