@@ -57,16 +57,8 @@ h6 {
 	font-family: 'Merriweather', Roboto, Arial;
 }
 
-/* BS Modal */
+/* Modal */
 
-/* Vanilla CSS Modal */
-
-/* Body class for killing the scroll */
-body.modal-open {
-	overflow: hidden;
-}
-
-/* Container to scroll within */
 .modal {
 	position: fixed;
 	top: 0;
@@ -80,7 +72,6 @@ body.modal-open {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Shell div to position the modal */
 .modal-dialog {
 	position: relative;
 	width: auto;
@@ -88,12 +79,10 @@ body.modal-open {
 	max-width: 640px;
 }
 
-/* Actual modal content */
 .modal-content {
 	background-color: #fff;
 }
 
-/* Modal header */
 .modal-header {
 	display: flex;
 	align-items: flex-start;
@@ -102,12 +91,11 @@ body.modal-open {
 	border-bottom: 2px solid #eee;
 }
 
-/* Modal body */
 .modal-body {
 	padding: 1rem;
 }
 
-/* fade in svg circle bg */
+/* Animations on page load */
 
 .st0 {
 	opacity: 0;
@@ -176,10 +164,10 @@ hr {
 /* Colors */
 
 :root {
-	--yellow: #fed600;
+	/* --yellow: #fed600; */
 	--lightblue: #91d8f7;
-	--darkblue: #485e88;
-	--orange: #faa74a;
+	/* --darkblue: #485e88; */
+	/* --orange: #faa74a; */
 }
 ::-moz-selection {
 	background: var(--lightblue);
@@ -194,9 +182,6 @@ body {
 	margin: 2.5rem;
 	margin-top: 5rem;
 }
-hr {
-	border-width: 2px;
-}
 
 p {
 	line-height: 1.5rem;
@@ -210,13 +195,9 @@ hr {
 /* Buttons */
 
 .btn {
-	border: 0;
 	display: inline-block;
 	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
 	user-select: none;
-	font-size: 1rem;
 	cursor: pointer;
 
 	border-radius: 0;
@@ -240,8 +221,6 @@ hr {
 #profile-img {
 	margin: 0.5rem;
 	width: 12rem;
-	border: 2px solid #fff;
-	border-radius: 50%;
 }
 
 #name-heading {
@@ -349,19 +328,7 @@ a:focus:before {
 	font-style: italic;
 }
 
-/* Tooltips */
-
-.tooltip-inner {
-	background: #333;
-	color: #fff;
-	border-radius: 0;
-}
-.bs-tooltip-auto[x-placement^='bottom'] .arrow::before,
-.bs-tooltip-bottom .arrow::before {
-	border-bottom-color: #333;
-}
-
-/* Animated Profile */
+/* Animated Profile Pic */
 
 #profile-img path {
 	stroke-dasharray: 1000;
@@ -383,7 +350,6 @@ a:focus:before {
 }
 
 @media screen and (max-width: 768px) {
-	/* md */
 	body {
 		margin-top: 2.5rem;
 	}
@@ -391,18 +357,10 @@ a:focus:before {
 		display: none !important;
 	}
 	.tag-col p {
-		transform: rotate(0deg) !important;
-		display: inline;
-		padding-right: 0.25rem;
+		display: none;
 	}
 	#profile-img {
 		margin-top: 1.25rem;
 		margin-bottom: 1.25rem;
-	}
-}
-@media screen and (max-width: 576px) {
-	/* xs */
-	.tag-col p {
-		display: none;
 	}
 }
