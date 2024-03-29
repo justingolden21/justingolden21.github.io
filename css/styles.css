@@ -60,7 +60,7 @@ body.modal-open {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1050; /* Equivalent to Bootstrap's $zindex-modal */
+	z-index: 40;
 	display: none;
 	width: 100%;
 	height: 100%;
@@ -99,7 +99,7 @@ body.modal-open {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1040; /* Equivalent to Bootstrap's $zindex-modal-backdrop */
+	z-index: 30; /* Equivalent to Bootstrap's $zindex-modal-backdrop */
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.5); /* Equivalent to Bootstrap's $modal-backdrop-bg */
@@ -337,7 +337,7 @@ a:focus:before {
 
 #menu-btn {
 	position: fixed;
-	z-index: 1000;
+	z-index: 20;
 	left: 0;
 	top: 0;
 	border: 4px solid transparent;
@@ -353,7 +353,7 @@ a:focus:before {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 10;
 	background-color: #333;
 	overflow-x: hidden;
 	padding-top: 6rem;
