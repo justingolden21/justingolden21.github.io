@@ -210,7 +210,7 @@ hr {
 	user-select: none;
 	cursor: pointer;
 	border: 2px solid #333;
-	padding: 0.75rem 1.25rem;
+	padding: 0.5rem 1rem;
 }
 .btn-dark {
 	color: #fff;
