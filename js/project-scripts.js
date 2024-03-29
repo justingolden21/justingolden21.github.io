@@ -384,17 +384,24 @@ document.addEventListener('DOMContentLoaded', function () {
 					<div class="modal-body">
 						
 							 ${project.screenshot ? `<img class="project-screenshot" src="${project.screenshot}"><br><br>` : ''}
+								
 								${
-									project.type != 'art'
+									project.features
 										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
-									<p class="project-details" style="margin-bottom: 1rem;">${project.features}
-										<a class="a view-project" href="${project.link}" target="_blank">View this project </a>
-									</p>`
-										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
-									<p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
+											<p class="project-details" style="margin-bottom: 1rem;">${project.features}</p>`
+										: ''
 								}
-
-						
+								${
+									project.link
+										? `<a class="a view-project" href="${project.link}" target="_blank">View this project </a>`
+										: ''
+								}
+								${
+									project.desc
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
+											<p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
+										: ''
+								}
 								${
 									project.story
 										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Story</h3>
