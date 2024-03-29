@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" style="font-size: 1.5rem">
+						<h4 class="modal-title text-xl">
 							<img class="project-icon" src="${project.icon}">
 							${project.name}
 						</h4>
@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					</div>
 					<div class="modal-body">
                         ${
-													project.type != 'art' ? `<h3 style="font-size: 1.5rem">Overview</h3>` : ''
+													project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''
 												}
 		${
 			!project.screenshotIsLong
@@ -407,11 +407,11 @@ document.addEventListener('DOMContentLoaded', function () {
                             
                             ${
 															project.type != 'art'
-																? `<h3 style="font-size: 1.75rem">Features</h3>
+																? `<h3 class="text-xl">Features</h3>
                                     <p class="project-details" style="margin-bottom: 1rem;">${project.features}
                                         <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
                                     </p>`
-																: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
+																: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
                                     <p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
 														}
 
@@ -429,24 +429,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     ${
 											project.type != 'art'
-												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Features</h3>
+												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
                             <p class="project-details" style="margin-bottom: 1rem;">${project.features}
                                 <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
                             </p>`
-												: `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">About</h3>
+												: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
                             <p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
 										}
                     `
 		}
                     ${
 											project.story
-												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Story</h3>
+												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Story</h3>
                     <p class="project-features" style="margin-bottom: 1rem;">${project.story}</p>`
 												: ''
 										}
                     ${
 											project.tech
-												? `<h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Tech</h3>
+												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Tech</h3>
                     <p class="project-tech" style="margin-bottom: 1rem;">${project.tech}</p>`
 												: ''
 										}
