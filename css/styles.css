@@ -356,14 +356,18 @@ hr {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#tag-wrapper {
+		display: flex;
+		gap: 1rem;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	body {
 		margin-top: 2.5rem;
 	}
-	.tag-col br {
-		display: none !important;
-	}
-	.tag-col p {
+	.tag-col {
 		display: none;
 	}
 	#profile-img {
