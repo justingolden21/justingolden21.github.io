@@ -383,11 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					</div>
 					<div class="modal-body">
 						
-							 ${
-										project.screenshot
-											? `<img class="project-screenshot" src="${project.screenshot}"><br><br>`
-											: ''
-								  }
+							 ${project.screenshot ? `<img class="project-screenshot" src="${project.screenshot}"><br><br>` : ''}
 								${
 									project.type != 'art'
 										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
@@ -397,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function () {
 										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
 									<p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
 								}
-								
+
 						
 								${
 									project.story
