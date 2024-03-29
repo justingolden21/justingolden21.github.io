@@ -347,10 +347,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				<div class="project-div-back" style="background-color:${project.color}">
 					<img class="project-icon" src="${project.icon}">
 					<p class="project-desc">
-                        ${
-													project.type == 'art'
-														? project.name
-														: `<a
+						${
+							project.type == 'art'
+								? project.name
+								: `<a
 									class="a project-desc-link"
 									href="${project.link}"
 									target="_blank"
@@ -358,15 +358,14 @@ document.addEventListener('DOMContentLoaded', function () {
 								>
 									${project.name}
 								</a>`
-												}
+						}
 						${project.desc}
 					</p>
-                    ${
-											project.type == 'art'
-												? ''
-												: `<a class="a view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">
-                            View this project</a>`
-										}
+					${
+						project.type == 'art'
+							? ''
+							: `<a class="a view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">View this project</a>`
+					}
 				</div>
 			</div>
 		</div>`;
@@ -382,72 +381,60 @@ document.addEventListener('DOMContentLoaded', function () {
 						</h4>
 						<button type="button" class="close btn" data-target="#modal-${id}">&times;</button>
 					</div>
-					<div class="modal-body">
-                        ${project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''}
-		${
-			!project.screenshotIsLong
-				? `
+					<div class="modal-body">${project.type != 'art' ? `<h3 class="text-xl">Overview</h3>` : ''}
+						${
+							!project.screenshotIsLong
+								? `
 						<div style="display: flex; gap: 1rem;">
 							<div>
-                                ${
-																	project.type != 'art'
-																		? `<img class="project-screenshot" src="${project.screenshot}">`
-																		: project.imgs
-																				.map(
-																					(src) =>
-																						`<img src="${src}" style="max-width:75%; margin: 1rem;">`
-																				)
-																				.join('')
-																}
+								${
+									project.type != 'art'
+										? `<img class="project-screenshot" src="${project.screenshot}">`
+										: project.imgs
+												.map((src) => `<img src="${src}" style="max-width:75%; margin: 1rem;">`)
+												.join('')
+								}
 							</div>
 							<div>
-								
-                            
-                            ${
-															project.type != 'art'
-																? `<h3 class="text-xl">Features</h3>
-                                    <p class="project-details" style="margin-bottom: 1rem;">${project.features}
-                                        <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
-                                    </p>`
-																: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
-                                    <p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
-														}
-
+								${
+									project.type != 'art'
+										? `<h3 class="text-xl">Features</h3>
+												<p class="project-details" style="margin-bottom: 1rem;">${project.features}
+													<a class="a view-project" href="${project.link}" target="_blank">View this project </a>
+												</p>`
+										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
+												<p class="project-details" style="margin-bottom: 1rem;">${project.name} ${project.descLong} </p><p>Right click and press "save as" to download for use as a wallpaper or to print as a poster.</p>`
+								}
 							</div>
 						</div>
 						<br>`
-				: `
-                    ${
-											project.screenshot
-												? `<img class="project-screenshot" src="${project.screenshot}">
-						<br><br>`
-												: ''
-										}
-
-
-                    ${
-											project.type != 'art'
-												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
-                            <p class="project-details" style="margin-bottom: 1rem;">${project.features}
-                                <a class="a view-project" href="${project.link}" target="_blank">View this project </a>
-                            </p>`
-												: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
-                            <p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
-										}
-                    `
-		}
-                    ${
-											project.story
-												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Story</h3>
-                    <p class="project-features" style="margin-bottom: 1rem;">${project.story}</p>`
-												: ''
-										}
-                    ${
-											project.tech
-												? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Tech</h3>
-                    <p class="project-tech" style="margin-bottom: 1rem;">${project.tech}</p>`
-												: ''
-										}
+								: `${
+										project.screenshot
+											? `<img class="project-screenshot" src="${project.screenshot}"><br><br>`
+											: ''
+								  }
+								${
+									project.type != 'art'
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Features</h3>
+									<p class="project-details" style="margin-bottom: 1rem;">${project.features}
+										<a class="a view-project" href="${project.link}" target="_blank">View this project </a>
+									</p>`
+										: `<h3 class="text-xl" style="margin-bottom: 0.5rem;">About</h3>
+									<p class="project-details" style="margin-bottom: 1rem;">${project.desc}</p>`
+								}`
+						}
+								${
+									project.story
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Story</h3>
+											<p class="project-features" style="margin-bottom: 1rem;">${project.story}</p>`
+										: ''
+								}
+								${
+									project.tech
+										? `<h3 class="text-xl" style="margin-bottom: 0.5rem;">Tech</h3>
+											<p class="project-tech" style="margin-bottom: 1rem;">${project.tech}</p>`
+										: ''
+								}
 					</div>
 				</div>
 			</div>
