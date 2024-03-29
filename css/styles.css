@@ -119,7 +119,7 @@ h6 {
 #nametag,
 .tag-col,
 .fade-in-text,
-#menu-btn,
+#menu-btn.fade,
 hr {
 	opacity: 0;
 	animation: fadeIn linear 2s;
@@ -136,7 +136,7 @@ hr {
 .fade-in-text {
 	animation-delay: 3s;
 }
-#menu-btn {
+#menu-btn.fade {
 	animation-delay: 1.5s;
 }
 hr {
