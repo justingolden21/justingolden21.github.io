@@ -19,7 +19,7 @@ const PROJECTS = [
 			"When Google announced they would be shutting down chrome apps, I didn't want to leave my users hanging. I redesigned Desktop Clock from the ground up as a PWA (installable website) and kept every feature I could while adding many more, and completely overhauled both the tech stack and aesthetic"
 	},
 	{
-		name: 'Desktop Clock',
+		name: 'Desktop Clock Chrome App',
 		type: 'web app',
 		icon: 'img/projects/desktop-clock-icon.svg',
 		color: '#999',
@@ -439,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				</div>
 			</div>
 		</div>`;
+
 		document.getElementById(
 			project.type != 'art' ? project.type.replace(' ', '-') + 's' : project.type
 		).innerHTML += tmpHTML;
