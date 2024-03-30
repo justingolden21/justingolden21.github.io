@@ -18,12 +18,20 @@
 .project-desc {
 	padding: 0.5rem;
 	text-align: left;
+	max-height: 5.5rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
 }
 .project-screenshot {
 	width: 90%;
 	border: 2px solid #eee;
 	box-shadow: 0.5rem 0.5rem 0px var(--lightblue);
 	margin: 1rem auto;
+	max-width: 48rem;
+	max-height: 32rem;
+	object-fit: contain;
+	display: block;
 }
 .project-div:hover .project-details {
 	display: inline;
@@ -72,6 +80,7 @@
 	text-align: center;
 	color: #666;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .view-project-in-card {
 	padding: 0.25rem;

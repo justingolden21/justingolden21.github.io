@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<style type="text/css">
+.st0{fill:#666;stroke:#333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.st1{fill:#ccc;stroke:#333;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.st2{fill:#333;stroke:#ccc;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<rect x="4" y="4" class="st0" width="52" height="52"/>
+
+<rect x="8" y="8" class="st1" width="16" height="16"/>
+<rect x="24" y="8" class="st1" width="16" height="16"/>
+<rect x="40" y="8" class="st1" width="16" height="16"/>
+<rect x="8" y="24" class="st1" width="16" height="16"/>
+<rect x="24" y="24" class="st1" width="16" height="16"/>
+<rect x="40" y="24" class="st1" width="16" height="16"/>
+<rect x="8" y="40" class="st1" width="16" height="16"/>
+<rect x="24" y="40" class="st1" width="16" height="16"/>
+<rect x="40" y="40" class="st1" width="16" height="16"/>
+
+<polygon class="st2" points="40,24 44,16 48,24 48,48 40,48"/>
+<line class="st2" x1="40" y1="24" x2="48" y2="24"/>
+<line class="st2" x1="40" y1="40" x2="48" y2="40"/>
+</svg>

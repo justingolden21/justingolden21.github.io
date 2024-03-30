@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<style type="text/css">
+.st0{fill:#333;stroke:#fff;stroke-width:1}
+</style>
+<rect x="24" y="8" class="st0" width="16" height="16"/>
+<rect x="28" y="12" class="st0" width="8" height="8"/>
+<path class="st0" d="M28,12L24,8M36,12L40,8M28,20L24,24M36,20L40,24"/>
+
+<rect x="40" y="24" class="st0" width="16" height="16"/>
+<rect x="44" y="28" class="st0" width="8" height="8"/>
+<path class="st0" d="M44,28L40,24M52,28L56,24M44,36L40,40M52,36L56,40"/>
+
+<rect x="40" y="40" class="st0" width="16" height="16"/>
+<rect x="44" y="44" class="st0" width="8" height="8"/>
+<path class="st0" d="M44,44L40,40M52,44L56,40M44,52L40,56M52,52L56,56"/>
+
+<rect x="24" y="40" class="st0" width="16" height="16"/>
+<rect x="28" y="44" class="st0" width="8" height="8"/>
+<path class="st0" d="M28,44L24,40M36,44L40,40M28,52L24,56M36,52L40,56"/>
+
+<rect x="8" y="40" class="st0" width="16" height="16"/>
+<rect x="12" y="44" class="st0" width="8" height="8"/>
+<path class="st0" d="M12,44L8,40M20,44L24,40M12,52L8,56M20,52L24,56"/>
+</svg>
