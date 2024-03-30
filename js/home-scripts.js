@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// ==== Make and Rotate Tags ====
 
 	const TAGS =
-		'WebDesign UI UX GraphicDesign LogoDesign Branding Typography HTML CSS JS jQuery Bootstrap Sass Jekyll Svelte AlpineJS TailwindCSS NoSQL Android MobileApps Firebase PWA SEO Writing VideoEditing'.split(
+		'WebDesign UI UX GraphicDesign LogoDesign Branding Typography HTML CSS JS jQuery Bootstrap Sass Jekyll Svelte SvelteKit AlpineJS React Vue TailwindCSS MySQL NoSQL Android MobileApps Firebase Supabase PWA SEO Writing VideoEditing WordPress GoogleCharts'.split(
 			' '
 		);
 
