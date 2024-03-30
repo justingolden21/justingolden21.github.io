@@ -18,6 +18,10 @@
 .project-desc {
 	padding: 0.5rem;
 	text-align: left;
+	max-height: 5.5rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
 }
 .project-screenshot {
 	width: 90%;

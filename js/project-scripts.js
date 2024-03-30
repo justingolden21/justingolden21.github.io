@@ -285,6 +285,193 @@ const PROJECTS = [
 		story:
 			'TailwindCSS has an awesome color palette, but it can be a pain to use if you are not using TailwindCSS. I made this website to solve that problem. I designed the UI to be very friendly and easy to use, and to scale especially well on mobile.'
 	},
+	{
+		name: 'Sports Top 25',
+		type: 'website',
+		icon: 'img/projects/sports-top-25-icon.svg',
+		link: 'https://sportstop25.netlify.app/',
+		desc: 'is a website to view the latest college basketball and football AP and coaches top 25 rankings.',
+		color: '#111827'
+	},
+	{
+		name: "Play Liar's Dice",
+		type: 'website',
+		icon: 'img/projects/play-liars-dice.svg',
+		link: 'https://playliarsdice.netlify.app/',
+		desc: "is a website to play Liar's Dice online for free by passing the phone.",
+		color: '#1e3a8a',
+	},
+	{
+		name: 'Pokemon Types',
+		type: 'website',
+		icon: 'img/projects/pokemon-types-icon.svg',
+		link: 'https://pokemon-types.netlify.app/',
+		desc: 'is a website to view type matchups in Pokémon Go.',
+		color: '#b8b8d0'
+	},
+	{
+		name: 'SVG Circle to Path',
+		type: 'website',
+		icon: 'img/projects/svg-circle-to-path-icon.svg',
+		link: 'https://justingolden.me/svg-circle-to-path/',
+		desc: 'is a simple utility to create a circle in an SVG path.'
+	},
+	{
+		name: 'Screen Info',
+		type: 'website',
+		icon: 'img/projects/screen-info-icon.png',
+		link: 'https://justingolden.me/screeninfo/',
+		desc: 'is a simple website to view device and screen information at a glance.',
+		color: '#29293d'
+	},
+	{
+		name: 'Big Fish',
+		type: 'website',
+		icon: 'img/projects/big-fish-icon.png',
+		link: 'https://bigfishgame.web.app/',
+		desc: 'is a relaxing idle game where you grow your beautiful aquarium to absurd sizes.',
+		color: '#083691'
+	},
+	{
+		name: 'Cellular Automata',
+		type: 'website',
+		icon: 'img/projects/cellular-automata-icon.png',
+		link: 'https://justingolden.me/cellular-automata/',
+		desc: 'is a website that allows you to explore all 256 rules of 1D cellular automata.',
+		color: '#000'
+	},
+	{
+		name: 'Password Generator',
+		type: 'website',
+		icon: 'img/projects/password-generator-icon.svg',
+		link: 'https://justingolden.me/password-generator/',
+		desc: 'is a simple password generator for secure, unique, and easy to remember passwords.'
+	},
+	{
+		name: 'Three n plus one',
+		type: 'website',
+		icon: 'img/projects/three-n-plus-one-icon.svg',
+		link: 'https://justingolden.me/three-n-plus-one/',
+		desc: 'is an interactive an analysis of the collatz conjecture.'
+	},
+	{
+		name: 'Chmod',
+		type: 'website',
+		icon: 'img/projects/chmod-icon.svg',
+		link: 'https://justingolden.me/chmod/',
+		desc: 'is a simple chmod calculator for converting file permissions across different formats.',
+		color: '#000'
+	},
+	{
+		name: 'Conway\'s Game of Life',
+		type: 'website',
+		icon: 'img/projects/game-of-life-icon.svg',
+		link: 'https://justingolden.me/game-of-life/',
+		desc: 'is a simple and fun implementation of the game of life.'
+	},
+	{
+		name: 'Small Game of Life',
+		type: 'website',
+		icon: 'img/projects/game-of-life-icon.svg',
+		link: 'https://justingolden.me/smallgameoflife/',
+		desc: 'is a code golf game of life implementation in under 1kb. <a class="a" href="https://justingolden21.medium.com/conways-game-of-life-in-javascript-in-1000-bytes-95b458835b51">Read about this</a>.'
+	},
+	{
+		name: 'Blackjack Practice',
+		type: 'website',
+		icon: 'img/projects/blackjack-icon.svg',
+		link: 'https://justingolden.me/blackjack/',
+		desc: 'is a website where you can test your knowledge of what to do with different blackjack hands and view blackjack odds and expected values.',
+		color: '#138660'
+	},
+	{
+		name: 'Word a day',
+		type: 'website',
+		icon: 'img/projects/word-a-day-icon.png',
+		link: 'https://justingolden.me/wordaday/',
+		desc: 'is a website where a new word appears every day, from Jan 1 - Dec 31. Enjoy a story, one word at a time.',
+		color: '#ecc94b'
+	},
+	{
+		name: 'HearthSearch',
+		type: 'website',
+		icon: 'img/projects/hearthsearch-icon.png',
+		link: 'https://justingolden.me/hearthsearch/',
+		desc: 'is a website you can use to search for Hearthstone cards and art.',
+		color: '#684519'
+	},
+	{
+		name: 'Mass Hysteria Calculator',
+		type: 'website',
+		icon: 'img/projects/mass-hysteria-icon.png',
+		link: 'https://justingolden.me/mass-hysteria/',
+		desc: 'is a website you can use to quickly calculate the odds that Hearthstone minions die from Mass Hysteria.',
+		color: '#073E64'
+	},
+	{
+		name: 'Sudoku',
+		type: 'website',
+		icon: 'img/projects/sudoku-icon.svg',
+		link: 'https://justingolden.me/sudoku/',
+		desc: 'is a website where you can play or print sudoku for free and without ads on six difficulties.',
+		color: '#666'
+	},
+	{
+		name: 'Color Histogram',
+		type: 'website',
+		icon: 'img/projects/color-histogram-icon.svg',
+		link: 'https://justingolden.me/color-histogram/',
+		desc: 'is a website you can use to generate a color histogram of any image.',
+		color: '#66c'
+	},
+	{
+		name: 'Factorio Balancers',
+		type: 'website',
+		icon: 'img/projects/factorio-balancers-icon.png',
+		link: 'https://justingolden.me/factorio/',
+		desc: 'is a website where you can view factorio balancer images and blueprints.',
+		color: '#CC8033'
+	},
+	{
+		name: 'Storm Tracker',
+		type: 'website',
+		icon: 'img/projects/storm-tracker-icon.svg',
+		link: 'https://justingolden.me/storm-tracker/',
+		desc: 'is a website you can use to track storm count, mana, life, and more in a game with a MTG storm deck.',
+		color: '#333'
+	},
+	{
+		name: 'Color Finder',
+		type: 'website',
+		icon: 'img/projects/color-finder-icon.png',
+		link: 'https://justingolden.me/colorfinder/',
+		desc: 'is a simple tool you can use to extract specific colors from an image.',
+		color: '#337AB7'
+	},
+	{
+		name: 'Image Steganography',
+		type: 'website',
+		icon: 'img/projects/image-steganography-icon.png',
+		link: 'https://justingolden.me/steganography/',
+		desc: 'is a tool you can use to encode and decode secret messages inside images.',
+		color: '#66c'
+	},
+	{
+		name: 'Map Generator',
+		type: 'website',
+		icon: 'img/projects/map-generator-icon.png',
+		link: 'https://justingolden.me/map-generator/',
+		desc: 'is a simple tool you can use to generate random maps for games or world-building.',
+		color: '#34991F'
+	},
+	{
+		name: 'Map Generator 2',
+		type: 'website',
+		icon: 'img/projects/map-generator-icon.png',
+		link: 'https://justingolden.me/map-generator-2/',
+		desc: 'is a the second version of map generator, a tool to easily generate random maps.',
+		color: '#34991F'
+	},
 
 	{
 		name: 'Smile',
@@ -303,6 +490,13 @@ const PROJECTS = [
 	}
 	// art has no screenshot, link, features, tech, or story, but has an array of imgs
 
+	// {
+	// 	name: 'Clock',
+	// 	type: 'website',
+	// 	icon: 'img/projects/desktopclock-icon.svg',
+	// 	link: 'https://desktopclock.app/',
+	// 	desc: 'is a simple, resizable customizable, installable clock for any device.'
+	// },
 	// {
 	// 	'name': 'Barcode',
 	// 	'type': 'website',
@@ -327,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					<img class="project-icon" src="${project.icon}">
 					<h3 class="project-title">${project.name}</h3>
 				</div>
-				<div class="project-div-back" style="background-color:${project.color}">
+				<div class="project-div-back" style="background-color:${project.color ?? '#333'}">
 					<img class="project-icon" src="${project.icon}">
 					<p class="project-desc">
 						${
@@ -347,7 +541,9 @@ document.addEventListener('DOMContentLoaded', function () {
 					${
 						project.type == 'art'
 							? ''
-							: `<a class="a view-project-in-card" style="border-bottom-color:${project.color}" href="${project.link}" target="_blank" tabindex="-1">View this project</a>`
+							: `<a class="a view-project-in-card" style="border-bottom-color:${
+									project.color ?? '#333'
+							  }" href="${project.link}" target="_blank" tabindex="-1">View this project</a>`
 					}
 				</div>
 			</div>
