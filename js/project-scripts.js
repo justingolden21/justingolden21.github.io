@@ -472,6 +472,16 @@ const PROJECTS = [
 		desc: 'is a the second version of map generator, a tool to easily generate random maps.',
 		color: '#34991F'
 	},
+	{
+		name: 'Mario Kart Time Trial Comparisons',
+		type: 'website',
+		icon: 'img/projects/mario-kart-time-trial-icon.png',
+		link: 'https://mario-kart-time-trials.netlify.app/',
+		desc: 'is a simple tool to quickly enter and compare mario kart time trials with friends.',
+		color: '#000'
+	},
+
+	
 
 	{
 		name: 'Smile',
