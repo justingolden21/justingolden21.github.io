@@ -480,6 +480,15 @@ const PROJECTS = [
 		desc: 'is a simple tool to quickly enter and compare mario kart time trials with friends.',
 		color: '#000'
 	},
+	{
+		name: 'Unicode Range Selector',
+		type: 'website',
+		icon: 'img/projects/unicode-range-selector-icon.svg',
+		link: 'https://justingolden.me/unicode-range-selector/',
+		desc: 'is a simple tool that allows you to view and select unicode characters in a given range.',
+		color: '#039'
+		
+	},
 
 	
 
